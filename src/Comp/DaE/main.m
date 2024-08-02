@@ -1,3 +1,4 @@
+% main program for the algorithm DAE
 clear;
 clc;
 
