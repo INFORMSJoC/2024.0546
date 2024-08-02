@@ -6,6 +6,9 @@ Its basic idea is to first figure out the links that are surely to be absent or 
 There are some code files that are of importance:
 - `main.m`: the main program of ALogTP, including the parameter settings, decomposition
 of networks, and the implementation of LogTP to the subnetworks.
+- `links.m`: this function returns a L × 2 matrix, each of whose rows corresponds to
+a link. For example, the row with elements 1, 2 denotes the link between agent 1
+and 2.
 - `def.m`: this functions returns the partial deriatives of the utility functions with respect to the actual network x.
 - `def_p.m`: this functions returns the partial deriatives of the utility functions with respect to the prior p.
 - `robust_links.m`: this function returns two N ×N matrix M and D that help figure
