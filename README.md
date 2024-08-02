@@ -9,10 +9,6 @@ The software and data in this repository are a snapshot of the software and data
 that were used in the research reported on in the paper 
 [Pairwise Stability in Weighted Network Formation Games: Selection and Computation](https://doi.org/10.1287/ijoc.2024.0546) by Caihua Chen, Junhao Tao and Yang Zhan. 
 
-**Important: This code is being developed on an on-going basis at 
-https://github.com/tkralphs/JoCTemplate. Please go there if you would like to
-get a more recent version or would like support**
-
 ## Cite
 
 To cite the contents of this repository, please cite both the paper and this repo, using their respective DOIs.
@@ -24,7 +20,7 @@ https://doi.org/10.1287/ijoc.2024.0546.cd
 Below is the BibTex for citing this snapshot of the repository.
 
 ```
-@misc{CacheTest,
+@misc{PSWNFG,
   author =        {Caihua Chen and Junhao Tao and Yang Zhan},
   publisher =     {INFORMS Journal on Computing},
   title =         {Pairwise Stability in Weighted Network Formation Games: Selection and Computation},
@@ -83,12 +79,4 @@ or
 ```
 python test.py mult
 ```
-To replicate the results in [Figure 2](results/sum-test), do either
 
-```
-make sum-test
-```
-or
-```
-python test.py sum
-```
