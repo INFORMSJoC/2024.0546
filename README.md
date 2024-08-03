@@ -38,7 +38,7 @@ A path-following algorithm works in MatLab software for computing pairwise stabl
 ## Code files
 In the folder `src`, we show the codes of our algorithm LogTP. More precisely, LogTP has different versions that apply to different problems.
 
-`LogTPc': an algorithm for problems that agents all have concave and differentiable utility functions, used in Section 5.2 of the paper.
+`LogTPc`: an algorithm for problems that agents all have concave and differentiable utility functions, used in Section 5.2 of the paper.
 
 `LogTPm`: an algorithm for problems of mixed-extension, agents all have multi-linear utility functions, used in Section 5.1 of the paper.
 
