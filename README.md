@@ -68,3 +68,8 @@ To replicate the results in Table 3, apply the codes in folder `src/LogTPc/publi
 
 To replicate the results in Table 4 and 5 and Figure 6, apply the codes in folder `src/LogTPc/public-good` and `src/Comp/ALogTP`.
 
+# References
+1. Bich P, Morhaim L (2020). On the existence of pairwise stable weighted networks. Mathematics of Operations Research, 45:1393–1404.
+2. Bramoulle Y, Kranton R (2007). Public goods in networks. Journal of Economic Theory, 135:478–494.
+3. Goyal S, Joshi S (2006). Unequal connections. International Journal of Game Theory, 34:319–349.
+4. Jackson MO, Wolinsky A (1996). A strategic model of social and economic networks. Journal of Economic Theory, 71:44–74.
