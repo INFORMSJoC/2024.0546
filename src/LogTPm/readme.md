@@ -16,7 +16,7 @@ of “graphs.m”.
 
 The codes in this folder handle the coauthor model of Jackson & Wolinsky (1996). When applied to
 a new problem, one only has to adjust the formulas in `values.m` apart from necessary
-adjustments to the parameters in `main.m`.
+adjustments to the parameters in `main.m`. Another version for the coonections model of Jackson & Wolisnky (1996) is shown in folder `connections`.
 
 # References
 1. Jackson MO, Wolinsky A (1996). A strategic model of social and economic networks. Journal of Economic Theory, 71:44–74.
