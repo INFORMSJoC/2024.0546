@@ -1,6 +1,6 @@
 This 'src' folder contains codes of five algorithms for computing pairwise stable networks. 
-1. `LogTPc`: an algorithm for problems that agents all have concave and differentiable utility functions, used in Section 5.2 of the paper.
-2. `LogTPm`: an algorithm for problems of mixed-extension, agents all have multi-linear utility functions, used in Section 5.1 of the paper.
+1. `LogTPc`: an algorithm for problems that agents all have concave and differentiable utility functions, used in Section 5.2 and 5.4 of the paper.
+2. `LogTPm`: an algorithm for problems of mixed-extension, agents all have multi-linear utility functions, used in Section 5.1 and 5.3 of the paper.
 3. `Comp/LinTP`: the algorithm of Herings & Zhan (2024), used in Section 5.3 for comparison.
 4. `Comp/DaE`: the algorithm of Leung (2020), used in Section 5.4 for comparison.
 5. `Comp/ALogTP`: the accelerated version of our algorithm that exploits the algorithm of Leung (2020), used in Section 5.4 of the paper.
