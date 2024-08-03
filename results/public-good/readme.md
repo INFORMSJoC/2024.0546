@@ -1,11 +1,14 @@
 In this folder, we show the numercial results on the public good provision model of Bramoulle & Kranton (2007).
 
-For each n (scale of problem), we generate 20 random problems. For n larger than 10, DAE cannot solve  
+# Setup
+For each n (scale of problem), we generate 20 random problems. 
+The name of file shows the scale of problems. For example, `6.xlsx` records the results for problems with 6 agents.
 
-The file `6.xlsx`, `8.xlsx` and `10.xlsx` report the comparison result of LogTP and DAE when there are 6, 8 and 10 agents respectively.
+For smaller-scaled problems(n = 6, 8 and 10), we solve each of them with DAE and LogTP. For LogTP, each problem is solved with 5 random starting points.
+The results are shown in Table 3 in our paper.
 
-The rest files report the comparison result of LogTP and ALogTP.
-
+For larger-scaled problems (n>10), the implement of DAE can be quite time-consuming. We then apply LogTP and ALogTP. 
+Each problem is solved with 5 random starting points. The results are summarized in Table 4 in our paper.
 
 # References
 1. Bramoulle Y, Kranton R (2007). Public goods in networks. Journal of Economic Theory, 135:478–494.
