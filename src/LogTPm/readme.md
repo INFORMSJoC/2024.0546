@@ -11,7 +11,7 @@ The partial deriatives can be derived with the codes in:
 to an unweighted network that may form.
 - `values.m`: this function returns a 2^L × N matrix, whose i-th row gives the payoff
 vector of all agents in the unweighted network given by the i-th row of the output
-of “graphs.m”.
+of `graphs.m`.
 
 
 The codes in this folder handle the coauthor model of Jackson & Wolinsky (1996). When applied to
