@@ -33,50 +33,38 @@ Below is the BibTex for citing this snapshot of the repository.
 
 ## Description
 
-A path-following algorithm works in MatLab software for computing pairwise stable networks. This repository includes the source code and computational results for all randomly generated numerical instances presented in the paper.
+A path-following algorithm works in MatLab software for computing pairwise stable networks. This repository includes the source code and computational results for all randomly generated numerical instances presented in the paper. For more details of pairwise stability and our algorithm, one can refer to the file `Manual.pdf` or our paper.
 
 ## Code files
+In the folder `src`, we show the codes of our algorithm LogTP. More precisely, LogTP has different versions that apply to different problems.
 
-In Linux, to build the version that multiplies all elements of a vector by a
-constant (used to obtain the results in [Figure 1](results/mult-test.png) in the
-paper), stepping K elements at a time, execute the following commands.
+`LogTPc': an algorithm for problems that agents all have concave and differentiable utility functions, used in Section 5.2 of the paper.
 
-```
-make mult
-```
+`LogTPm`: an algorithm for problems of mixed-extension, agents all have multi-linear utility functions, used in Section 5.1 of the paper.
 
-Alternatively, to build the version that sums the elements of a vector (used
-to obtain the results [Figure 2](results/sum-test.png) in the paper), stepping K
-elements at a time, do the following.
-
-```
-make clean
-make sum
-```
-
-Be sure to make clean before building a different version of the code.
+`Comp/ALogTP`: an accelerated version of LogTP that applies to problems with a sparse structure. i.e. only direct connections matter. ALogTP is used in Section 5.4 of the paper.
 
 ## Results files
 
-Figure 1 in the paper shows the results of the multiplication test with different
-values of K using `gcc` 7.5 on an Ubuntu Linux box.
+This results folder contains the numerical results of algorithms mainly reported in Section 5 of the paper.
 
-![Figure 1](results/mult-test.png)
-
-Figure 2 in the paper shows the results of the sum test with different
-values of K using `gcc` 7.5 on an Ubuntu Linux box.
-
-![Figure 1](results/sum-test.png)
+`co-author`: algorithm 'LogTPm' for the co-author model introduced in Jackson & Wolinsky (1996), reported in Section 5.1.
+`patent-race`: algorithm 'LogTPc' for the patent race network problem introduced in Goyal & Joshi (2006) and Bich & Morhaim (2020), reported in Section 5.2.
+`connections`: the comparison between algorithms 'LogTPm' and 'Comp/LinTP' for the connections model introduced in Jackson & Wolinsky (1996), reported in Section 5.3.
+`public-good`: the comparison among algorithms 'LogTPm', 'Comp/DaE' and 'Comp/ALogTP' for the public good provision network problem introduced in Bramoulle and Kranton (2007), reported in Section 5.4.
+`Convergence to LinTP`: an example that shows the convergence of LogTP to LinTP as η approaches 0, summarized in Figure 1.
 
 ## Replicating
 
-To replicate the results in [Figure 1](results/mult-test), do either
+To replicate the results in Figure 1, apply `plot1.m` in folder `results/convergence to LinTP`.
 
-```
-make mult-test
-```
-or
-```
-python test.py mult
-```
+To replicate the results in Figure 2 and 3, apply `main.m` in folder `src/LogTPm`.
+
+To replicate the results in Table 1 and Figure 4, apply `main.m` and `check_PS.m` in folder `src/LogTPc`.
+
+To replicate the results in Table 2 and Figure 5, apply the codes in folder `src/LogTPm/connections` and `src/Comp/LinTP`.
+
+To replicate the results in Table 3, apply the codes in folder `src/LogTPc/public-good`and `src/Comp/DAE'.
+
+To replicate the results in Table 4 and 5 and Figure 6, apply the codes in folder `src/LogTPc/public-good` and `src/Comp/ALogTP`.
 
