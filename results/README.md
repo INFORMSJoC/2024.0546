@@ -1,4 +1,4 @@
-This `results` folder contains the numerical results of algorithms reported in Section 5 of the paper. 
+This `results` folder contains the numerical results of algorithms mainly reported in Section 5 of the paper. 
 1. `co-author`: algorithm 'LogTPm' for the co-author model introduced in Jackson & Wolinsky (1996), reported in Section 5.1.
 2. `patent-race`: algorithm 'LogTPc' for the patent race network problem introduced in Goyal & Joshi (2006) and Bich & Morhaim (2020), reported in Section 5.2.
 3. `connections`: the comparison between algorithms 'LogTPm' and 'Comp/LinTP' for the connections model introduced in Jackson & Wolinsky (1996), reported in Section 5.3.
