@@ -14,10 +14,9 @@ vector of all agents in the unweighted network given by the i-th row of the outp
 of “graphs.m”.
 
 
-The codes in this folder handle the coauthor model of Jackson & Wolinsky (1995). When applied to
+The codes in this folder handle the coauthor model of Jackson & Wolinsky (1996). When applied to
 a new problem, one only has to adjust the formulas in `values.m` apart from necessary
 adjustments to the parameters in `main.m`.
 
 # References
-1. Jackson MO, Wolinsky A (1995) A strategic model of social and economic networks. Technical report, Northwestern University, Center for Mathematical
-Studies in Economics.
+1. Jackson MO, Wolinsky A (1996). A strategic model of social and economic networks. Journal of Economic Theory, 71:44–74.
