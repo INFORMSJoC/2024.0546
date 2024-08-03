@@ -11,7 +11,7 @@ and 2.
 - `def_p.m`: this functions returns the partial deriatives of the utility functions with respect to the prior p.
 
 The codes in this folder handle a patent race model of Goyal & Joshi (2006). When applying LogTP to a new problem, 
-one has to adjust the parameters in main.m and the formulas in def.m and def p.m.
+one has to adjust the parameters in `main.m` and the formulas in `def.m` and `def_p.m`.
 
 As argued in our paper, the utility functions in the patent race model sometimes are not concave. That is, the algorithm may 
 end at some networks that are not pairwise stable. To solve this problem, we draw the graphs of the utility functions via `check_PS.m`. With the graphs, one can
