@@ -49,9 +49,13 @@ In the folder `src`, we show the codes of our algorithm LogTP. More precisely, L
 This results folder contains the numerical results of algorithms mainly reported in Section 5 of the paper.
 
 `co-author`: algorithm 'LogTPm' for the co-author model introduced in Jackson & Wolinsky (1996), reported in Section 5.1.
+
 `patent-race`: algorithm 'LogTPc' for the patent race network problem introduced in Goyal & Joshi (2006) and Bich & Morhaim (2020), reported in Section 5.2.
+
 `connections`: the comparison between algorithms 'LogTPm' and 'Comp/LinTP' for the connections model introduced in Jackson & Wolinsky (1996), reported in Section 5.3.
+
 `public-good`: the comparison among algorithms 'LogTPm', 'Comp/DaE' and 'Comp/ALogTP' for the public good provision network problem introduced in Bramoulle and Kranton (2007), reported in Section 5.4.
+
 `Convergence to LinTP`: an example that shows the convergence of LogTP to LinTP as η approaches 0, summarized in Figure 1.
 
 ## Replicating
