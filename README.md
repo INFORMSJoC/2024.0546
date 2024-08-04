@@ -46,7 +46,7 @@ In the folder `src`, we show the codes of our algorithm LogTP. More precisely, L
 
 ## Results files
 
-This results folder contains the numerical results of algorithms mainly reported in Section 5 of the paper.
+This `results` folder contains the numerical results of algorithms mainly reported in Section 5 of the paper.
 
 `co-author`: algorithm 'LogTPm' for the co-author model introduced in Jackson & Wolinsky (1996), reported in Section 5.1.
 
