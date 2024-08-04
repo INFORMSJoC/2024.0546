@@ -12,7 +12,7 @@ when 3.94<=k<= 4.54, there are two pairwise stable networks (1,1,0) and (1,0,1).
 
 when 4.56<=k<=6.00, a unique pairwise stable network (1,0,0) exists.
 
-Figure 4 illustrates how k3 affects T in patent race networks, where T represents the expected innovation time of the whole society.
+Figure 4 illustrates how k3 affects the expected innovation time of the whole society in patent race networks.
 
 # References
 1. Bich P, Morhaim L (2020). On the existence of pairwise stable weighted networks. Mathematics of Operations Research, 45:1393–1404.
