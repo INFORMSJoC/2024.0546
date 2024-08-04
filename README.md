@@ -36,11 +36,11 @@ Below is the BibTex for citing this snapshot of the repository.
 A path-following algorithm works in MatLab software for computing pairwise stable networks. This repository includes the source code and computational results for all randomly generated numerical instances presented in the paper. See the file `Manual.pdf` or our paper for a detailed description of pairwise stability and the algorithm.
 
 ## Code files
-In the folder `src`, we show the codes of our algorithm LogTP. More precisely, LogTP has different versions that apply to different problems.
+The folder `src` contains the codes of our algorithm LogTP, which has different versions that apply to different setups of problems.
 
-`LogTPc`: an algorithm for problems where agents all have concave and differentiable utility functions, used in Section 5.2 and 5.4 of the paper.
+`LogTPc`: an algorithm for problems where agents all have concave and differentiable utility functions, used in Sections 5.2 and 5.4 of the paper.
 
-`LogTPm`: an algorithm for problems of mixed-extension, agents all have multi-linear utility functions, used in Section 5.1 and 5.3 of the paper.
+`LogTPm`: an algorithm for problems of mixed-extension, agents all have multi-linear utility functions, used in Sections 5.1 and 5.3 of the paper.
 
 `Comp/ALogTP`: an accelerated version of LogTP that applies to problems with a sparse structure. i.e. only direct connections matter. ALogTP is used in Section 5.4 of the paper.
 
@@ -62,7 +62,7 @@ The `results` folder contains the numerical results of algorithms reported in th
 
 To replicate the results in Figure 1, apply `plot1.m` in folder `results/convergence to LinTP`.
 
-To replicate the results in Figure 2 and 3, apply `main.m` in folder `src/LogTPm`.
+To replicate the results in Figures 2 and 3, apply `main.m` in folder `src/LogTPm`.
 
 To replicate the results in Table 1 and Figure 4, apply `main.m` and `check_PS.m` in folder `src/LogTPc`.
 
@@ -70,7 +70,7 @@ To replicate the results in Table 2 and Figure 5, apply the codes in folders `sr
 
 To replicate the results in Table 3, apply the codes in folders `src/LogTPc/public-good` and `src/Comp/DAE`.
 
-To replicate the results in Table 4 and 5 and Figure 6, apply the codes in folder `src/LogTPc/public-good` and `src/Comp/ALogTP`.
+To replicate the results in Tables 4 and 5 and Figure 6, apply the codes in folder `src/LogTPc/public-good` and `src/Comp/ALogTP`.
 
 # References
 1. Bich P, Morhaim L (2020). On the existence of pairwise stable weighted networks. Mathematics of Operations Research, 45:1393–1404.
