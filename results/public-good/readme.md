@@ -1,4 +1,4 @@
-In this folder, we show the numercial results on the public good provision model of Bramoulle & Kranton (2007).
+In this folder, we show the numercial results on the public good provision model of Bramoulle & Kranton (2007), including comparision among LogTP, DAE and ALogTP. (in Section 5.4)
 
 # Setup
 For each n (scale of problem), we generate 20 random problems. 
