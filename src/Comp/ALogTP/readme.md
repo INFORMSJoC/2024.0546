@@ -27,7 +27,7 @@ corresponding subnetwork.
 subnetworks.
 
 The codes in this folder consider the public good provision model of Bramoulle and Kranton (2007). When applying ALogTP to a new problem, one has to adjust the parameters in 
-`main.m` and the formulas in `def.m` and `def p.m`.
+`main.m` and the formulas in `def.m` and `def_p.m`.
 
 # References
 1. Leung, M. P. (2020). Equilibrium computation in discrete network games. Quantitative Economics, 11:1325–1347.
