@@ -66,7 +66,7 @@ To replicate the results in Figure 2 and 3, apply `main.m` in folder `src/LogTPm
 
 To replicate the results in Table 1 and Figure 4, apply `main.m` and `check_PS.m` in folder `src/LogTPc`.
 
-To replicate the results in Table 2 and Figure 5, apply the codes in folder `src/LogTPm/connections` and `src/Comp/LinTP`.
+To replicate the results in Table 2 and Figure 5, apply the codes in folders `src/LogTPm/connections` and `src/Comp/LinTP`.
 
 To replicate the results in Table 3, apply the codes in folder `src/LogTPc/public-good`and `src/Comp/DAE`.
 
