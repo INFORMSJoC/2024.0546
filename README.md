@@ -56,7 +56,7 @@ This results folder contains the numerical results of algorithms mainly reported
 
 `public-good`: the comparison among algorithms 'LogTPm', 'Comp/DaE' and 'Comp/ALogTP' for the public good provision network problem introduced in Bramoulle and Kranton (2007), reported in Section 5.4.
 
-`Convergence to LinTP`: an example that shows the convergence of LogTP to LinTP as η approaches 0, summarized in Figure 1.
+`Convergence to LinTP`: an example that shows the convergence of LogTP to LinTP as η approaches 0, reported in Section 4.2.
 
 ## Replicating
 
