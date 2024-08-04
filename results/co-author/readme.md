@@ -1,4 +1,4 @@
-In this folder, we show the numercial results on the coauthor model introduced in Jackson & Wolinsky (1996).
+In this folder, we show the numercial results on the coauthor model introduced in Jackson & Wolinsky (1996). (in Section 5.1)
 
 # Setup
 We consider problems with 5 agents. We set different levels of cost c for connection. 
