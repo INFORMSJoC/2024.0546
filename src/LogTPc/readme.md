@@ -13,7 +13,7 @@ and 2.
 The codes in this folder handle a patent race model of Goyal & Joshi (2006). When applying LogTPc to a new problem, 
 one has to adjust the parameters in `main.m` and the formulas in `def.m` and `def_p.m`. Another version for the public good provision model of Bramoulle & Kranton (2007) is shown in folder `public-good`.
 
-As argued in our paper, the utility functions in the patent race model sometimes are not concave. That is, the algorithm may 
+As argued in our paper, the utility functions in the patent race model sometimes are not concave. As a result, the algorithm may 
 end at some networks that are not pairwise stable. To solve this problem, we draw the graphs of the utility functions via `check_PS.m`. With the graphs, one can
 easily check pairwise stability of a certain network, according to our Theorem 2.
 
