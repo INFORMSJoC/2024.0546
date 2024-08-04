@@ -1,4 +1,4 @@
-In this folder, we show the numercial results on the connections model introduced in Jackson & Wolinsky (1996).
+In this folder, we show the results of the comparison between LogTP and LinTP on the connections model introduced in Jackson & Wolinsky (1996). (in Section 5.3)
 
 # Setup
 We assume the agents are located on a circle. That is,  every agent can only make
