@@ -8,9 +8,7 @@ For smaller-scaled problems(n = 6, 8 and 10), we solve each of them with DAE and
 The results are shown in Table 3 in our paper.
 
 For larger-scaled problems (n>10), the implement of DAE can be quite time-consuming. We then apply LogTP and ALogTP. 
-Each problem is solved with 5 random starting points. 
-
-These results are summarized in Table 4 in our paper.
+For each random problem, we choose 5 random starting points for both algorithms. These results are summarized in Table 4 in our paper.
 
 In figure 6-1 and 6-2, we show an example where DAE and LogTP yield different solutions.
 
