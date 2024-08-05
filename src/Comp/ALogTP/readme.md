@@ -16,7 +16,7 @@ out the links surely to be absent or built. A link ij ∈ L is surely to be abse
 Mij = 0 or Mji = 0. A link is surely to be established if Dij = 0 and Dji = 0.
 - `combine.m`: this function combines M and D and returns a new N × N matrix
 ˜D
-. For ij ∈ L, ˜Dij = 1 if the link is surely to be absent or built and ˜Dij = 0
+. For ij ∈ L, ˜Dij = 0 if the link is surely to be absent or built and ˜Dij = 1
 otherwise. With this matrix, we can decompose the network into smaller ones (via
 the Matlab function “conncomp”).
 - `search_subproblem.m`: this function generates a matrix of N columns from the
