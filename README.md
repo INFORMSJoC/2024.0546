@@ -33,7 +33,7 @@ Below is the BibTex for citing this snapshot of the repository.
 
 ## Description
 
-A path-following algorithm works in MatLab software for computing pairwise stable networks. This repository includes the source code and computational results for all randomly generated numerical instances presented in the paper. See the file `Manual.pdf` or our paper for a detailed description of pairwise stability and the algorithm.
+A path-following algorithm works in MatLab software for computing pairwise stable networks. This repository includes the source code and computational results for all randomly generated numerical instances presented in the paper. See the file `src/Manual.pdf` or our paper for a detailed description of pairwise stability and the algorithm.
 
 ## Code files
 The folder `src` contains the codes of our algorithm LogTP, which has different versions that apply to different setups of problems.
