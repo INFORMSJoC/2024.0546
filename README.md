@@ -1,107 +1,79 @@
 [![INFORMS Journal on Computing Logo](https://INFORMSJoC.github.io/logos/INFORMS_Journal_on_Computing_Header.jpg)](https://pubsonline.informs.org/journal/ijoc)
 
-# CacheTest
+# Pairwise Stability in Weighted Network Formation Games: Selection and Computation
 
 This archive is distributed in association with the [INFORMS Journal on
 Computing](https://pubsonline.informs.org/journal/ijoc) under the [MIT License](LICENSE).
 
 The software and data in this repository are a snapshot of the software and data
 that were used in the research reported on in the paper 
-[This is a Template](https://doi.org/10.1287/ijoc.2019.0000) by T. Ralphs. 
-The snapshot is based on 
-[this SHA](https://github.com/tkralphs/JoCTemplate/commit/f7f30c63adbcb0811e5a133e1def696b74f3ba15) 
-in the development repository. 
-
-**Important: This code is being developed on an on-going basis at 
-https://github.com/tkralphs/JoCTemplate. Please go there if you would like to
-get a more recent version or would like support**
+[Pairwise Stability in Weighted Network Formation Games: Selection and Computation](https://doi.org/10.1287/ijoc.2024.0546) by Caihua Chen, Junhao Tao and Yang Zhan. 
 
 ## Cite
 
 To cite the contents of this repository, please cite both the paper and this repo, using their respective DOIs.
 
-https://doi.org/10.1287/ijoc.2019.0000
+https://doi.org/10.1287/ijoc.2024.0546
 
-https://doi.org/10.1287/ijoc.2019.0000.cd
+https://doi.org/10.1287/ijoc.2024.0546.cd
 
 Below is the BibTex for citing this snapshot of the repository.
 
 ```
-@misc{CacheTest,
-  author =        {T. Ralphs},
+@misc{PSWNFG,
+  author =        {Caihua Chen and Junhao Tao and Yang Zhan},
   publisher =     {INFORMS Journal on Computing},
-  title =         {{CacheTest}},
-  year =          {2020},
-  doi =           {10.1287/ijoc.2019.0000.cd},
-  url =           {https://github.com/INFORMSJoC/2019.0000},
-  note =          {Available for download at https://github.com/INFORMSJoC/2019.0000},
+  title =         {Pairwise Stability in Weighted Network Formation Games: Selection and Computation},
+  year =          {2024},
+  doi =           {10.1287/ijoc.2024.0546.cd},
+  url =           {https://github.com/INFORMSJoC/2024.0546},
+  note =          {Available for download at https://github.com/INFORMSJoC/2024.0546},
 }  
 ```
 
 ## Description
 
-The goal of this software is to demonstrate the effect of cache optimization.
+A path-following algorithm works in MatLab software for computing pairwise stable networks. This repository includes the source code and computational results for all randomly generated numerical instances presented in the paper. See the file `src/Manual.pdf` or our paper for a detailed description of pairwise stability and the algorithm.
 
-## Building
+## Code files
+The folder `src` contains the codes of our algorithm LogTP, which has different versions that apply to different setups of problems.
 
-In Linux, to build the version that multiplies all elements of a vector by a
-constant (used to obtain the results in [Figure 1](results/mult-test.png) in the
-paper), stepping K elements at a time, execute the following commands.
+`LogTPc`: an algorithm for problems where agents all have concave and differentiable utility functions, used in Sections 5.2 and 5.4 of the paper.
 
-```
-make mult
-```
+`LogTPm`: an algorithm for problems of mixed-extension, agents all have multi-linear utility functions, used in Sections 5.1 and 5.3 of the paper.
 
-Alternatively, to build the version that sums the elements of a vector (used
-to obtain the results [Figure 2](results/sum-test.png) in the paper), stepping K
-elements at a time, do the following.
+`Comp/ALogTP`: an accelerated version of LogTP that applies to problems with a sparse structure. i.e. only direct connections matter. ALogTP is used in Section 5.4 of the paper.
 
-```
-make clean
-make sum
-```
+## Results files
 
-Be sure to make clean before building a different version of the code.
+The `results` folder contains the numerical results of algorithms reported in the paper.
 
-## Results
+`co-author`: algorithm `LogTPm` for the co-author model of Jackson & Wolinsky (1996), reported in Section 5.1.
 
-Figure 1 in the paper shows the results of the multiplication test with different
-values of K using `gcc` 7.5 on an Ubuntu Linux box.
+`patent-race`: algorithm `LogTPc` for the patent race network problem introduced in Goyal & Joshi (2006) and Bich & Morhaim (2020), reported in Section 5.2.
 
-![Figure 1](results/mult-test.png)
+`connections`: the comparison between algorithms `LogTPm` and `Comp/LinTP` for the connections model of Jackson & Wolinsky (1996), reported in Section 5.3.
 
-Figure 2 in the paper shows the results of the sum test with different
-values of K using `gcc` 7.5 on an Ubuntu Linux box.
+`public-good`: the comparison among algorithms `LogTPm`, `Comp/DaE` and `Comp/ALogTP` for the public good provision network problem introduced in Bramoulle and Kranton (2007), reported in Section 5.4.
 
-![Figure 1](results/sum-test.png)
+`Convergence to LinTP`: an example that shows the convergence of LogTP to LinTP as η approaches 0, reported in Section 4.2.
 
 ## Replicating
 
-To replicate the results in [Figure 1](results/mult-test), do either
+To replicate the results in Figure 1, apply `plot1.m` in folder `results/convergence to LinTP`.
 
-```
-make mult-test
-```
-or
-```
-python test.py mult
-```
-To replicate the results in [Figure 2](results/sum-test), do either
+To replicate the results in Figures 2 and 3, apply `main.m` in folder `src/LogTPm`.
 
-```
-make sum-test
-```
-or
-```
-python test.py sum
-```
+To replicate the results in Table 1 and Figure 4, apply `main.m` and `check_PS.m` in folder `src/LogTPc`.
 
-## Ongoing Development
+To replicate the results in Table 2 and Figure 5, apply the codes in folders `src/LogTPm/connections` and `src/Comp/LinTP`.
 
-This code is being developed on an on-going basis at the author's
-[Github site](https://github.com/tkralphs/JoCTemplate).
+To replicate the results in Table 3, apply the codes in folders `src/LogTPc/public-good` and `src/Comp/DAE`.
 
-## Support
+To replicate the results in Tables 4 and 5 and Figure 6, apply the codes in folder `src/LogTPc/public-good` and `src/Comp/ALogTP`.
 
-For support in using this software, submit an
-[issue](https://github.com/tkralphs/JoCTemplate/issues/new).
+# References
+1. Bich P, Morhaim L (2020). On the existence of pairwise stable weighted networks. Mathematics of Operations Research, 45:1393–1404.
+2. Bramoulle Y, Kranton R (2007). Public goods in networks. Journal of Economic Theory, 135:478–494.
+3. Goyal S, Joshi S (2006). Unequal connections. International Journal of Game Theory, 34:319–349.
+4. Jackson MO, Wolinsky A (1996). A strategic model of social and economic networks. Journal of Economic Theory, 71:44–74.
