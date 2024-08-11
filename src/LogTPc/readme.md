@@ -9,7 +9,7 @@ implementation of the predictor-corrector method.
   
 	Input: numP, number of players.
   
-	Output: a numP*2 matrix whose each row represents a possible link. For
+	Output: a numP*2 matrix lin whose each row represents a possible link. For
  	example, the row given by (i,j) represents the link between agent i and j. 
 
 - `init.m`:  to search for the starting point of the homotopy path.
