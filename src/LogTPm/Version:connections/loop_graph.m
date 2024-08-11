@@ -1,7 +1,7 @@
 function z = loop_graph(L)
 % loop_graph: all possible networks when assuming the agents
 % are located on a circle.
-% Input L: the number of links.
+% Input: L, the number of links.
 % Output: a 2^L*L matrix whose each row represents a possible network.
 
 
