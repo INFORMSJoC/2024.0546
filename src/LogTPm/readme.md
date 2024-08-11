@@ -10,7 +10,7 @@ We compute the partial derivatives with the codes in:
   
   Input: L, the number of links.
   
-  Output: a 2^L*L matrix gra whose each row represents a possible network. (global variable)
+  Output: a 2^L*L matrix gra whose each row represents a possible network. 
   
 - `values.m`: to compute the payoff vectors in each possible network.
   
