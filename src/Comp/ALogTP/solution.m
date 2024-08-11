@@ -2,7 +2,7 @@ function [sol,indicator] = solution(group)
 % solution.m: to figure out the non-robust links in a subnetwork and then apply
 % LogTP to compute the corresponding pairwise stable subnetwork (to determine
 % the strength of the non-robust links).
-% Input: group, a 1 × N vector that records a subnetwork.
+% Input: group, a 1 × N vector that records the players in a subnetwork.
 % Output: sol in [0,1]^L, a pairwise stable subnetwork; indicator, the number of nonrobust
 % links in this subnetwork.
 global e M D d L lin N Link
