@@ -1,5 +1,5 @@
 function y = F(t,s,p)
-%F: to combine the favorite strength via the decision of link players
+% F: to combine the favorite strength via the decision of link players
 % Input: t in [0,1], t-value; s in [0,1]^{2L}, the vector of favorite
 % strengths; p in [0,1]^{3L}, the prior.
 % Output: y in [0,1]^L, a network derived from the decision of link
