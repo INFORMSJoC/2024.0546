@@ -35,7 +35,7 @@ The rest parts of the codes are the same as LogTPc.
   
 	 Input: N, number of players.
   
-	 Output: a N*2 matrix lin whose each row represents a possible link. For example, the row given by (i,j) represents the link between agent i and j. 
+	 Output: a L*2 matrix lin whose each row represents a possible link. (L=N*(N-1)/2) For example, the row given by (i,j) represents the link between agent i and j. 
 
 - `init.m`:  to search for the starting point of the homotopy path.
   
