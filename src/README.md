@@ -7,6 +7,8 @@ This `src` folder contains codes of five algorithms for computing pairwise stabl
 
 Note that LogTP and ALogTP are the algorithms we develop. For DaE and LinTP, we show our own implementation and also distribute them.
 
+For a more detailed introduction, one can refer to the pdf file `src/Manual.pdf` or use the help function in Matlab.
+
 # References
 1. Herings PJJ, Zhan Y (2024). The computation of pairwise stable networks. Mathematical Programming, 203:443–473.
 2. Leung MP (2020). Equilibrium computation in discrete network games. Quantitative Economics, 11:1325–1347.
