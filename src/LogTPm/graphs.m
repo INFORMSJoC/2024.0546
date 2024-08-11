@@ -1,7 +1,7 @@
 function z = graphs(L)
 % graphs: to show the set of all possible networks.
-% input: L, the number of links.
-% output: a 2^L*L matrix whose each row represents a possible network.
+% Input: L, the number of links.
+% Output: a 2^L*L matrix whose each row represents a possible network.
 
 numG = 2.^L;
 z0 = zeros(numG,L);
