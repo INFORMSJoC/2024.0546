@@ -1,5 +1,5 @@
 function z = def(net)
-% def: To compute the partial deriatives of the utility functions with
+% def: To compute the partial derivatives of the utility functions with
 % respect to a given network
 % Input net: a network in [0,1]^{L}
 % output: a N*N matrix whose (i,j) and (j,i) -th element represents the
