@@ -21,12 +21,12 @@ We compare LinTP with our algorithm LogTP in Section 5.3 of our paper upon a con
   
   Input: L, the number of links.
   
-  Output: a 2^L×L matrix gra whose each row represents a possible network. (global
+  Output: a 2^L × L matrix gra whose each row represents a possible network. (global
   variable)
   
 - `loop_values.m`: to compute the payoff vectors in each possible network when assuming the agents are located on a circle.
   
-  Input: gra, a 2^L×L matrix recording all possible networks derived from `graphs.m`.
+  Input: gra, a 2^L × L matrix recording all possible networks derived from `graphs.m`.
   
   Output: a 2^L × N matrix Va whose each row corresponds to the payoff vector.
   
@@ -34,22 +34,22 @@ We compare LinTP with our algorithm LogTP in Section 5.3 of our paper upon a con
   
    Input net: a network in [0,1]^{L}.
   
-   Output: a N*N matrix whose (i,j) and (j,i) -th element represents the
+   Output: a N × N matrix whose (i,j) and (j,i) -th element represents the
    partial derivatives of i's and j's utility functions with respect to link
    ij, respectively.
 
 
 - `homof.m`: to compute the homotopy system.
   
-   Input x: the point x in [0,1]^{4L+1}.
+   Input: x, a point in [0,1]^{4L+1}.
   
-   Output y: the value of the homotopy system (in [0,1]^{4L}).
+   Output: y, the value of the homotopy system (in [0,1]^{4L}).
 
 - `ahomof.m`: the system of equations in the corrector step.
   
-   Input x: the point x in [0,1]^{4L+1}.
+   Input: x, a point in [0,1]^{4L+1}.
 
-   Output y: the value of the system of equations in the corrector step (in [0,1]^{4L+1}).
+   Output: y, the value of the system of equations in the corrector step (in [0,1]^{4L+1}).
 
 # References
 1. Herings PJJ, Zhan Y (2024) The computation of pairwise stable networks. Mathematical Programming 203:443–473.
