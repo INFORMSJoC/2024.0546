@@ -9,7 +9,6 @@ N = 4; %number of agents
 L = N*(N-1)/2; %number of all possible links
 lin = link(N);
 e = lognrnd(0,1,1,N); %random problems:efforts
-e = [1.13, 4.20, 0.14, 0.82]
 d = 0.2; %cost for link
 
 
