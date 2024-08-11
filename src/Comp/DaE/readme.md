@@ -16,10 +16,10 @@ of networks, and the implementation of LogTP to the subnetworks.
 - `value_ind.m`: to compute the payoff of a particular agent in a given
  network.
 
- Input: N, number of players; e, d, parameters of the model; net in
- [0,1]^L, a given network; i, index for the player.
-
- Output: the payoff of agent i in network net.
+  Input: N, number of players; e, d, parameters of the model; net in
+  [0,1]^L, a given network; i, index for the player.
+ 
+  Output: the payoff of agent i in network net.
 
 - `robust_links.m`: to figure out the robustly absent and built links.
   
