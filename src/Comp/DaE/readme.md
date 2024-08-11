@@ -5,7 +5,7 @@ Its basic idea is to first figure out the links that are surely to be absent or 
 
 In this folder, we show our implementation of DAE and distribute it along with our algorithm LogTP.
 
-- `main.m`: the main program of ALogTP, including the parameter settings, decomposition
+- `main.m`: the main program of DAE, including the parameter settings, decomposition
 of networks, and the implementation of LogTP to the subnetworks.
 
 - `dvalue.m`: to compute the difference of payoff in a given network.
