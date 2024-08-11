@@ -8,7 +8,7 @@ of networks, and the implementation of LogTP to the subnetworks.
 
 - `robust_links.m`: to figure out the robustly absent and built links.
   
-  Input: parameters in the model. Take the public provision model of Bramoull´e and
+  Input: N, number of players and other parameters in the model. Take the public provision model of Bramoull´e and
   Kranton (2007) as an example. (in Section 5.4 of our paper) e, the effort
   vector; d > 0, cost for links.
   
@@ -18,7 +18,7 @@ of networks, and the implementation of LogTP to the subnetworks.
 - `combine.m`: to summarize the results of `robust_link.m` and prepare for the
   decomposition.
   
-  Input: the matrice M and D derived from `robust_link.m`.
+  Input: N, number of players; the matrice M and D derived from `robust_link.m`.
   
   Output: a N × N matrix ˜D. For link ij, ˜Dij = 0 if the link is surely to be absent
   or built and ˜Dij = 1 otherwise. With this matrix, we can decompose the network
