@@ -7,9 +7,9 @@ implementation of the predictor-corrector method.
 
 - `links.m`: % link: to show the set of all possible links.
   
-	Input: numP, number of players.
+	Input: N, number of players.
   
-	Output: a numP*2 matrix lin whose each row represents a possible link. For
+	Output: a L*2 matrix lin whose each row represents a possible link. For
  	example, the row given by (i,j) represents the link between agent i and j. 
 
 - `init.m`:  to search for the starting point of the homotopy path.
@@ -33,15 +33,15 @@ implementation of the predictor-corrector method.
  	Output: y in [0,1]^L, a network derived from the decision of link
  	players (by combining the favorite strengths of different agents upon the same link).
 
-- `def.m`: To compute the partial deriatives of the utility functions at point s in [0,1]^{2L} with
+- `def.m`: To compute the partial derivatives of the utility functions at point s in [0,1]^{2L} with
  respect to a given network x.
 
  	Input: s in [0,1]^{2L}, the vector of favorite strengths; x: a network in
  	in [0,1]^{L}.
  
  	Output: a N*N matrix whose (i,j) and (j,i) -th element equals to the
-	partial drivatives of agent i and j's utility functions with respect to
-	link ij, resepectively.
+	partial derivatives of agent i and j's utility functions with respect to
+	link ij, respectively.
 
 - `homof.m`: to compute the homotopy system.
   
@@ -58,7 +58,7 @@ implementation of the predictor-corrector method.
 
 
 # Application
-The codes in this folder handle a patent race model of Goyal & Joshi (2006). As argued in our paper, the utility functions in the patent race model sometimes are not concave. As a result, the algorithm may end at some networks that are not pairwise stable. To solve this problem, we draw the graphs of the utility functions via `check_PS.m`. With the graphs, one can easily check pairwise stability of a certain network, according to our Theorem 2.
+The codes in this folder handle a patent race model of Goyal & Joshi (2006). As argued in our paper, the utility functions in the patent race model are sometimes not concave. As a result, the algorithm may end at some networks that are not pairwise stable. To solve this problem, we draw the graphs of the utility functions via `check_PS.m`. With the graphs, one can easily check the pairwise stability of a certain network, according to our Theorem 2.
 
 When applying LogTPc to a new problem, one has to adjust the parameters in `main.m` and the formulas in `def.m`. We show an example in folder  `Version:public-good`. This version applies to the public good provision model of Bramoulle & Kranton (2007), which is investigated in Section 5.4 in our paper. 
 
