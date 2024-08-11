@@ -4,7 +4,7 @@ function [sol, k, ind] = solution1(N,group,e,d,D,M)
 % Input: N, number of players; group, a 1 × N vector that records a
 % subnetwork; e, d, parameters of the model; D, M two matrice derive from
 % "robust_links.m".
-% Output: sol in [0,1]^L, a pairwise stable subnetwork; k, number of pairwise stable subnetworks; ind, the number of nonrobust
+% Output: sol, a subset of [0,1]^L that reports all pairwise stable subnetwork; k, number of pairwise stable subnetworks; ind, the number of nonrobust
 % links in this subnetwork.
     num = norm(group,1); % number of players in the subproblem
 
