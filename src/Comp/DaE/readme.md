@@ -55,7 +55,7 @@ of networks, and the implementation of LogTP to the subnetworks.
   
   Input: group, a 1 × N vector that records a subnetwork.
 
-  Output: sol in [0,1]^L, a pairwise stable subnetwork; indicator, the number of nonrobust
+  Output: sol, a subset of [0,1]^L that reports all pairwise stable subnetworks; indicator, the number of nonrobust
   links in this subnetwork.
 
 
