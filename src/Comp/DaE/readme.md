@@ -6,6 +6,21 @@ Its basic idea is to first figure out the links that are surely to be absent or 
 - `main.m`: the main program of ALogTP, including the parameter settings, decomposition
 of networks, and the implementation of LogTP to the subnetworks.
 
+- `dvalue.m`: to compute the difference of payoff in a given network.
+ 
+   Input: N, e, d, paramters for the problem; net in [0,1]^L, a given
+  network; i, j, the corresponding agents; lin, output of `link.m`.
+  
+  Output: y, the difference (between the cases xij = 1 ad xij=0) of agent i's payoff functions in a given network.
+
+- `value_ind.m`: to compute the payoff of a particular agent in a given
+ network.
+
+ Input: N, number of players; e, d, parameters of the model; net in
+ [0,1]^L, a given network; i, index for the player.
+
+ Output: the payoff of agent i in network net.
+
 - `robust_links.m`: to figure out the robustly absent and built links.
   
   Input: N, number of players and other parameters in the model. Take the public provision model of Bramoull´e and
@@ -27,38 +42,23 @@ of networks, and the implementation of LogTP to the subnetworks.
 - `search_subproblem.m`: to modify the results of the Matlab function `conncomp`
   in the decomposition step.
 
-  Input: S, the output of “conncomp(˜D)”; D, the N × N matrix derived from `robust_link.m`; num S, the number of connected conponents computed by Matlab
-  codes max(S).
+  Input: N, number of players; S, the output of “conncomp(˜D)”; D, the N × N matrix derived from `robust_link.m`; num S, the number of connected conponents       
+  computed by Matlab codes max(S).
   
   Output: group, a matrix of N columns. Each row of the matrix corresponds to
   a subnetwork. Its (i, j)-th element equals to 1 if agent j is included in the i-th
   subnetwork and 0 otherwise.
   
-- `solution.m`: to figure out the non-robust links in a subnetwork and then apply
-  LogTP to compute the corresponding pairwise stable subnetwork. (to determine
-  the strength of the non-robust links).
+- `solution1.m`: to figure out the non-robust links in a subnetwork and then conduct an exhuastive searching. (in this process, we label all the candidate network with the function `decom`.
   
   Input: group, a 1 × N vector that records a subnetwork.
 
   Output: sol in [0,1]^L, a pairwise stable subnetwork; indicator, the number of nonrobust
   links in this subnetwork.
-  
-- `path-following.m`: the main program of LogTP, which is applied to the subnetworks.
- 
-  Input: Link in [0,1]^L, a network where strengths of the links not included in the
-  subnetwork equal zero. (In problems with a sparse structure, it makes no difference
-  when computing the utility functions and their partial derivatives) The robustly
-  absent or built links have strength 0 or 1, respectively. The strengths of the nonrobust
-  links in the subnetwork are set as −1.
 
-  Output: PS in [0,1]^L, a pairwise stable subnetwork that we derive from Link by replacing
-  the −1’s with the results of LogTP (we do this with the function `insert.m`); num, number of the non-robust links.
-
-  We omit the introductions to the functions applied in LogTP. For more details, one may refer to the file `src/LogTPc/readme.md`.
 
 # Application
-
-The codes in this folder consider the public good provision model of Bramoulle and Kranton (2007). When applying ALogTP to a new problem, one has to adjust the parameters in `main.m` and the formulas in `def.m`.
+We compare DAE with our algorithm LogTP in Section 5.4 of our paper upon a public good provision model of Bramoulle & Kranton (2007).
 
 # References
 1. Leung, M. P. (2020). Equilibrium computation in discrete network games. Quantitative Economics, 11:1325–1347.
