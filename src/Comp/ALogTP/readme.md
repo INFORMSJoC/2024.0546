@@ -1,13 +1,13 @@
 # Manual for ALogTP
-Inspired by the insightful approach of Leung (2020), we develop ALogTP, an accelerated version of LogTP, that applies to problems with a sparse structure.
+Inspired by the approach of Leung (2020), we developed ALogTP, an accelerated version of LogTP, that applies to problems with a sparse structure.
 i.e. the utility function of each agent only depends on his direct connections. 
-Its basic idea is to first figure out the links that are surely to be absent or built. These links decompose the whole network into smaller ones, to which we then apply LogTP.
+Its basic idea is to first figure out the links that are sure to be absent or built. These links decompose the whole network into smaller ones, to which we then apply LogTP.
 
 - `main.m`: the main program of ALogTP, including the parameter settings, decomposition
 of networks, and the implementation of LogTP to the subnetworks.
 
   We first figure the robust links in the problem with the functions `robust_links.m`
-and `combine.m`. Then we decompose the network into smaller ones with Matlab
+and `combine.m`. Then we decompose the network into smaller ones with the Matlab
 function `conncomp` and summarize its result with `search_subproblem.m`. Finally,
 we apply LogTP to the subnetworks via functions `solution.m` and “`pathfollowing.m`.
 
