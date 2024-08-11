@@ -4,7 +4,7 @@ function f = ahomof(x,Link)
 % Link in [0,1]^L, a vector that records the structure of a subnetwork. (where strengths of the links not included in the
 % subnetwork equal zero. The robustly absent or built links have strength 0 or 1, respectively. The strengths of the nonrobust
 % links in the subnetwork are set as −1.) 
-% output y: the value of the system of equations in the corrector step (in [0,1]^{2num+1})
+% Output: y, the value of the system of equations in the corrector step (in [0,1]^{2num+1})
 global d0 b0
 
 f = [
