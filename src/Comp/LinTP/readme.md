@@ -29,6 +29,12 @@ We compare LinTP with our algorithm LogTP in Section 5.3 of our paper upon a con
   Input: gra, a 2^L × L matrix recording all possible networks derived from `graphs.m`.
   
   Output: a 2^L × N matrix Va whose each row corresponds to the payoff vector.
+
+- `startingpoint.m`: to determine the starting point of the homotopy path.
+  
+	Input: p in [0,1]^L, a prior.
+
+	Output: z in [0,1]^{4L}, the starting point of the path.
   
 - `def.m`: To compute the partial derivatives of the utility functions with respect to a given network.
   
