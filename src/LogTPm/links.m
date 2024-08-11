@@ -1,7 +1,7 @@
 function z = links(numP)
 % links: to show the set of all possible links
 % Input numP: number of players 
-% output: a numP*2 matrix whose each row represents a possible link. For
+% Output: a numP*2 matrix whose each row represents a possible link. For
 % example, the row given by (i,j) represents the link between agent i and j.  
 numL = numP*(numP-1)/2;% number of links
 z = zeros(numL,2);
