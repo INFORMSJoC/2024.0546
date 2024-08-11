@@ -1,7 +1,7 @@
 function f = homof(x)
-% homof: to compute the homotopy system
-% Input x: the point x in [0,1]^{2L+1}
-% output y: the value of the homotopy system (in [0,1]^{2L})
+% homof: to compute the homotopy system.
+% Input: x, a point in [0,1]^{2L+1}.
+% output: y, the value of the homotopy system (in [0,1]^{2L}).
 global L M Sigma lin pri eta p
 
 t = x(M+1);
