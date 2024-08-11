@@ -73,7 +73,7 @@ The rest parts of the codes are the same as LogTPc.
 # Application
 
 The codes in this folder handle the coauthor model of Jackson & Wolinsky (1996). When applied to
-a new problem, one only has to adjust the formulas in `values.m` apart from necessary
+a new problem, one has to adjust the formulas in `values.m` apart from necessary
 adjustments to the parameters in `main.m`. Another version for the connections model of Jackson & Wolisnky (1996) is shown in folder `Version:connections`, which is applied in Section 5.3.
 
 # References
