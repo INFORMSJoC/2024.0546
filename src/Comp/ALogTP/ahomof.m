@@ -1,6 +1,6 @@
 function f = ahomof(x,Link)
 % ahomof: the system of equations in the corrector step
-% Input: x, a point x in [0,1]^{2num+1} (num is the number of non-robust links in this subnetwork);
+% Input: x, a point in [0,1]^{2num+1} (num is the number of non-robust links in this subnetwork);
 % Link in [0,1]^L, a vector that records the structure of a subnetwork. (where strengths of the links not included in the
 % subnetwork equal zero. The robustly absent or built links have strength 0 or 1, respectively. The strengths of the nonrobust
 % links in the subnetwork are set as −1.) 
