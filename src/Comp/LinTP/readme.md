@@ -1,6 +1,6 @@
 # Manual for LinTP
 LinTP is the algorithm of Herings & Zhan (2024) that computes pairwise stable networks in problems of mixed-extension where agents all have multi-linear utility functions. 
-Herings & Zhan (2024) establish the equivalent between pairwise stable networks and Nash equilibria of certain noncooperative games. They then apply the linear tracing procedure
+Herings & Zhan (2024) establish the equivalence between pairwise stable networks and Nash equilibria of certain noncooperative games. They then apply the linear tracing procedure
 of Harsanyi & Selten (1988) to select and compute the pairwise stable networks.
 
 LinTP is similar to LogTPc since it also applies a predictor-corrector method to numerically trace a homotopy path. The only difference is that their path is determined by a homotopy system of a higher dimension.
