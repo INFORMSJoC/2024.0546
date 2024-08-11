@@ -10,13 +10,13 @@ We compute the partial derivatives with the codes in:
   
   Input: L, the number of links.
   
-  Output: a 2^L×L matrix gra whose each row represents a possible network. (global variable)
+  Output: a 2^L*L matrix gra whose each row represents a possible network. (global variable)
   
 - `values.m`: to compute the payoff vectors in each possible network.
   
-  Input: gra, a 2^L×L matrix recording all possible networks derived from `graphs.m`.
+  Input: gra, a 2^L*L matrix recording all possible networks derived from `graphs.m`.
   
-  Output: a 2^L × N matrix Va whose each row corresponds to the payoff vector.
+  Output: a 2^L*N matrix Va whose each row corresponds to the payoff vector.
   
 - `def.m`: To compute the partial derivatives of the utility functions with respect to a given network.
   
@@ -35,7 +35,8 @@ The rest parts of the codes are the same as LogTPc.
   
 	 Input: N, number of players.
   
-	 Output: a L*2 matrix lin whose each row represents a possible link. (L=N*(N-1)/2) For example, the row given by (i,j) represents the link between agent i and j. 
+	 Output: a L*2 matrix lin whose each row represents a possible link. For example, the row given by (i,j) represents the link between agent i and j.
+  			
 
 - `init.m`:  to search for the starting point of the homotopy path.
   
