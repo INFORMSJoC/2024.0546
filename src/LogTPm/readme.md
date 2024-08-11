@@ -65,7 +65,7 @@ The rest parts of the codes are the same as LogTPc.
   
    Output: y, the value of the homotopy system (in [0,1]^{2L}).
 
-- `ahomof.m`: the system of equations in the corrector step.
+- `ahomof.m`: the system of equations to solve in the corrector step.
   
    Input: x, a point in [0,1]^{2L+1}.
 
