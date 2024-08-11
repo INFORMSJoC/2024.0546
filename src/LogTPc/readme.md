@@ -33,7 +33,7 @@ implementation of the predictor-corrector method.
  	Output: y in [0,1]^L, a network derived from the decision of link
  	players (by combining the favorite strengths of different agents upon the same link).
 
-- `def.m`: To compute the partial derivatives of the utility functions at point s in [0,1]^{2L} with
+- `def.m`: to compute the partial derivatives of the utility functions at point s in [0,1]^{2L} with
  respect to a given network x.
 
  	Input: s in [0,1]^{2L}, the vector of favorite strengths; x: a network in
