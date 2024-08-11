@@ -38,7 +38,7 @@ of networks, and the implementation of LogTP to the subnetworks.
   LogTP to compute the corresponding pairwise stable subnetwork. (to determine
   the strength of the non-robust links).
   
-  Input: group, a 1*N vector that records a subnetwork.
+  Input: group, a 1*N vector that records players in a subnetwork.
 
   Output: sol in [0,1]^L, a pairwise stable subnetwork; indicator, the number of nonrobust
   links in this subnetwork.
