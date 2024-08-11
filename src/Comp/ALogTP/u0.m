@@ -1,9 +1,9 @@
 function z = u0(x,i,j,Link,sigma)
-%  u0: to compute the elements of the homotopy system at t=0
-%  Input: x in [0,1], link strength; i in {1,2..L},j in {1,2}, index for the link and player (in the sense of "lin");
+%  u0: to compute the elements of the homotopy system at t=0.
+%  Input: x in [0,1], link strength; i in {1,2..num},j in {1,2}, index for the link and player (in the sense of "lin");
 %  Link in [0,1]^L, a vector that records the structure of the subnetwork;
 %  sigma>0, weight for the logarithmic penalty.
-%  output: the 2*i+2-j -th element of the the homotopy system at t=0
+%  output: the 2*i+2-j -th element of the the homotopy system at t=0.
 global pri d e N M lin L eta
     player = lin(i,j);
     net = insert(pri,Link);
