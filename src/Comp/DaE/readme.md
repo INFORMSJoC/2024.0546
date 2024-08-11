@@ -51,7 +51,7 @@ of networks, and the implementation of LogTP to the subnetworks.
   a subnetwork. Its (i, j)-th element equals 1 if agent j is included in the i-th
   subnetwork and 0 otherwise.
   
-- `solution1.m`: to figure out the non-robust links in a subnetwork and then conduct an exhaustive searching. (in this process, we label all the candidate networks with the function `decom`.
+- `solution1.m`: to figure out the non-robust links in a subnetwork and then conduct an exhaustive searching. (in this process, we label all the candidate networks with the function `decom`).
   
   Input: group, a 1 × N vector that records a subnetwork.
 
