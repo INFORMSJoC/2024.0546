@@ -75,7 +75,7 @@ The rest parts of the codes are the same as LogTPc.
 
 The codes in this folder handle the coauthor model of Jackson & Wolinsky (1996). When applied to
 a new problem, one has to adjust the formulas in `values.m` apart from necessary
-adjustments to the parameters in `main.m`. Another version for the connections model of Jackson & Wolisnky (1996) is shown in folder `Version:connections`, which is applied in Section 5.3. In this version, we assume the agents are located on a circle and adjust the codes in `links.m`, `graphs.m` and `values.m` accordingly. (We rename them by `loop_link.m`, `loop_graph.m` and `loop_values`.) 
+adjustments to the parameters in `main.m`. Another version for the connections model of Jackson & Wolisnky (1996) is shown in folder `Version:connections`, which is applied in Section 5.3. In this version, we assume the agents are located on a circle and then adjust the codes in `links.m`, `graphs.m` and `values.m` accordingly. (We rename them by `loop_link.m`, `loop_graph.m` and `loop_values`.) 
 
 # References
 1. Jackson MO, Wolinsky A (1996). A strategic model of social and economic networks. Journal of Economic Theory, 71:44–74.
