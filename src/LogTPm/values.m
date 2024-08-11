@@ -1,7 +1,7 @@
 function D = values(gra)
 % values: to compute the payoff vectors in each possible network.
-% input: gra, a 2^L*L matrix recording all possible networks.
-% output: a 2^L*N matrix whose each row corresponds to a payoff vector.
+% Input: gra, a 2^L*L matrix recording all possible networks.
+% Output: a 2^L*N matrix whose each row corresponds to a payoff vector.
 % of a unweighted network
     global G N c L lin
     D = zeros(G,N);
