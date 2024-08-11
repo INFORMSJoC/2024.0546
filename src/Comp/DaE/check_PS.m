@@ -1,8 +1,8 @@
 function z = check_PS(net,e,d,N,lin)
-% check_PS Judge whether the subnetwork is pairwise stable (unweighted
-% version)
+% check_PS: to check whether the subnetwork is pairwise stable (unweighted
+% version).
 % Input: a network net in [0,1]^L; e, d, N parameters of the problem;
-% lin, output of "link.m"
+% lin, output of "link.m".
 % Output: z in {0,1}, net is pairwise stable if z=1 and 0 otherwise.
 
     z = 1;
