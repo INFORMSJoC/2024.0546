@@ -1,18 +1,16 @@
-
 # Manual for LogTPm
 The LogTPm applies to a special type of network formation games with multi-affine
 utility functions. They are called mixed extension of network formation games, analogous
 to mixed extension of non-cooperative games. In these games, each xij is interpreted as the probability that link ij forms and the agents maximize their expected payoff.
 
-Since the utility functions are multi-linear, their partial deriatives are determined by the payoff the agents receive from the unweighted networks.
-We computeTte partial derivatives with the codes in:
+Since the utility functions are multi-linear, their partial derivatives are determined by the payoff the agents receive from the unweighted networks.
+We compute the partial derivatives with the codes in:
 
 - `graphs.m`:  to show the set of all possible unweighed networks.
   
   Input: L, the number of links.
   
-  Output: a 2^L×L matrix gra whose each row represents a possible network. (global
-  variable)
+  Output: a 2^L×L matrix gra whose each row represents a possible network. (global variable)
   
 - `values.m`: to compute the payoff vectors in each possible network.
   
@@ -20,7 +18,7 @@ We computeTte partial derivatives with the codes in:
   
   Output: a 2^L × N matrix Va whose each row corresponds to the payoff vector.
   
-- `def.m`: To compute the partial deriatives of the utility functions with respect to a given network.
+- `def.m`: To compute the partial derivatives of the utility functions with respect to a given network.
   
    Input net: a network in [0,1]^{L}.
   
