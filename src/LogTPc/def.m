@@ -1,5 +1,5 @@
 function z = def(s,x)
-% def: To compute the partial derivatives of the utility functions at point s in [0,1]^{2L} with
+% def: to compute the partial derivatives of the utility functions at point s in [0,1]^{2L} with
 % respect to a given network x.
 % Input: s in [0,1]^{2L}, the vector of favorite strengths; x: a network in
 % in [0,1]^{L}.
