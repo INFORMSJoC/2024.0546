@@ -11,14 +11,14 @@ We computeTte partial derivatives with the codes in:
   
   Input: L, the number of links.
   
-  Output: a 2L×L matrix gra whose each row represents a possible network. (global
+  Output: a 2^L×L matrix gra whose each row represents a possible network. (global
   variable)
   
 - `values.m`: to compute the payoff vectors in each possible network.
   
-  Input: gra, a 2L×L matrix recording all possible networks derived from `graphs.m`.
+  Input: gra, a 2^L×L matrix recording all possible networks derived from `graphs.m`.
   
-  Output: a 2L × N matrix Va whose each row corresponds to the payoff vector.
+  Output: a 2^L × N matrix Va whose each row corresponds to the payoff vector.
   
 - `def.m`: To compute the partial deriatives of the utility functions with respect to a given network.
   
