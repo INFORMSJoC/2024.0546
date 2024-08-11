@@ -6,6 +6,12 @@ Its basic idea is to first figure out the links that are surely to be absent or 
 - `main.m`: the main program of ALogTP, including the parameter settings, decomposition
 of networks, and the implementation of LogTP to the subnetworks.
 
+  We first figure the robust links in the problem with the functions `robust_links.m`
+and `combine.m`. Then we decompose the network into smaller ones with Matlab
+function `conncomp` and summarize its result with `search_subproblem.m`. Finally,
+we apply LogTP to the subnetworks via functions `solution.m` and “`pathfollowing.
+m`.
+
 - `robust_links.m`: to figure out the robustly absent and built links.
   
   Input: parameters in the model. Take the public provision model of Bramoull´e and
