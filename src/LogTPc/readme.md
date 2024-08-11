@@ -5,7 +5,7 @@ In its implement, we require the following code files:
 - `main.m`: the main program of LogTPc, including the parameter settings and the
 implementation of the predictor-corrector method.
 
-- `links.m`: % link: to show the set of all possible links.
+- `links.m`: to show the set of all possible links.
   
 	Input: N, number of players.
   
