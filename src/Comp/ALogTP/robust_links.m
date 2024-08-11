@@ -1,5 +1,10 @@
 function [M,D] = robust_links(N,e,d)
-%ROBUST_links figure out the nonrobust link
+% robust_links: to figure out the robust link
+% Input: parameters in the model. Take the public provision model of Bramoull´e and
+% Kranton (2007) as an example. (in Section 5.4 of our paper) e, the effort
+% vector; d > 0, cost for links.
+% Output: two N*N matrice M and D. A link ij is surely to be absent if
+% Mij = 0 or Mji = 0. This link is sure to be established if Dij = 0 and Dji = 0.
 
     M =ones(N,N); %robustly absent links
     D= zeros(N,N); %robustly potential links

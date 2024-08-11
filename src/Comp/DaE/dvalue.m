@@ -1,5 +1,9 @@
 function y = dvalue(N,e,d,net,i,j,lin)
-%DVALUE the difference of payoff functions
+% dvalue: to compute the difference of payoff functions in a given network.
+%  Input: N, e, d, paramters for the problem; net in [0,1]^L, a given
+%  network; i, j, the corresponding agents; lin, output of "link.m".
+%  Output: y, the difference (between the cases xij = 1 ad xij=0) of agent i's payoff functions in a given
+%  network.
     str = zeros(N,N);
     for k = 1:N*(N-1)/2
         str(lin(k,1),lin(k,2)) = net(k);

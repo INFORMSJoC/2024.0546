@@ -1,6 +1,12 @@
-% help judge whether a network is pairwise stable
+% check_PS: to check whether a given network is pairwise stable (according
+% to our Theorem 2).
+% Input: k, R&D capability of firm 3; x0 in [0,1]^L, the target network.
+% Output: graphs of utility functions.
+
 k=4.56;
 x0 = [1,0,1]
+
+% to plot the graphs
 x = 0:0.01:1;
 y1 =zeros(101,1);
 z1 =zeros(101,1);

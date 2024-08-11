@@ -1,6 +1,8 @@
 function z = homof(x0)
-%the homotopy mapping
-    global L M p
+% homof: to compute the homotopy system.
+% Input: x0, a point in [0,1]^{4L+1}.
+% Output: y, the value of the homotopy system (in [0,1]^{4L}).
+    global L M p lin
     sigma1 = zeros(L,1);
     sigma2 = zeros(L,1);
     mu1 = zeros(L,1);
@@ -27,8 +29,8 @@ function z = homof(x0)
     F2 = def(p);
 
     for i = 1:L
-        z(4*i-3) = sigma1(i)*(t*F1(2*i-1)+(1-t)*F2(2*i-1)) + sigma2(i)*(t*F1(2*i)+(1-t)*F2(2*i))+alpha(i)-beta(i);
-        z(4*i-2) = (t*F1(2*i-1)+(1-t)*F2(2*i-1))-(t*F1(2*i)+(1-t)*F2(2*i))+mu2(i)-mu1(i);
+        z(4*i-3) = sigma1(i)*(t*F1(lin(i,1),lin(i,2))+(1-t)*F2(lin(i,1),lin(i,2))) + sigma2(i)*(t*F1(lin(i,2),lin(i,1))+(1-t)*F2(lin(i,2),lin(i,1)))+alpha(i)-beta(i);
+        z(4*i-2) = (t*F1(lin(i,1),lin(i,2))+(1-t)*F2(lin(i,1),lin(i,2)))-(t*F1(lin(i,2),lin(i,1))+(1-t)*F2(lin(i,2),lin(i,1)))+mu2(i)-mu1(i);
         z(4*i-1) = sigma1(i) + sigma2(i) -1;
         z(4*i) = x(i) + y(i) - 1;
     end

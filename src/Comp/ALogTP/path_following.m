@@ -1,6 +1,9 @@
 function [PS,num] = path_following(Link)
-%PATH_FOLLOWING the predictor-corrector method to solve the subproblems
-global pri eta e d lin N L Sigma m p
+% path_following: the main program of LogTP, which is applied to the subnetworks.
+% Input: Link in [0,1]^L, a vector that records the structure of the subnetwork.
+% Output: PS, a pairwise stable subnetwork that we derive from Link by replacing
+% the −1s with the results of LogTP; num, number of the non-robust links.
+global pri eta L Sigma m p num target d0 b0
     opt1 = optimset('Display','off'); 
     tol0 = 1.0e-2;   %velocity 1
     tol1 = 1.0e-2;   %velocity2
@@ -30,7 +33,7 @@ global pri eta e d lin N L Sigma m p
     
 
     % initialization
-    x0 = [init(num,Link,target);0];
+    x0 = [init(Link);0];
 
     h0 = 0.5;
     g = [zeros(m,1);1];
@@ -42,16 +45,16 @@ global pri eta e d lin N L Sigma m p
         x1 = x0+ h0*g;
         e2 = min(x1(m+1),1-x1(m+1));
     end
-    e3 = norm(homof(x1,num,Link,target,m,Sigma,lin,e,d,N));% keep that the predictor step is not far away
+    e3 = norm(homof(x1,Link));% keep that the predictor step is not far away
     while e3 > tol1
         h0 = 0.9*h0;
         x1 = x0 + h0*g;
-        f0 = homof(x1,num,Link,target,m,Sigma,lin,e,d,N);
+        f0 = homof(x1,Link);
         e3 = norm(f0);
     end
     d0 = g;
     b0 = d0'*x1;
-    x = fsolve(@(x) [homof(x,num,Link,target,m,Sigma,lin,e,d,N);x(m+1)-x1(m+1)], x1,opt1);
+    x = fsolve(@(x) [homof(x,Link);x(m+1)-x1(m+1)], x1,opt1);
     g = -(x0 - x)/norm(x0 - x);
     x0 = x;
 
@@ -68,18 +71,17 @@ global pri eta e d lin N L Sigma m p
             x1 = x0 + h0*g;
             e2 = min(x1(m+1),1-x1(m+1));
         end
-        e3 = norm(homof(x1,num,Link,target,m,Sigma,lin,e,d,N));
+        e3 = norm(homof(x1,Link));
         while e3 > tol1
             h0 = 0.9*h0;
             x1 = x0 + h0*g;
-            f0 = homof(x1,num,Link,target,m,Sigma,lin,e,d,N);
+            f0 = homof(x1,Link);
             e3 = norm(f0);
         end
     
         d0 = g;
         b0 = d0'*x1;
-        opt1 = optimset('Display','off','TolFun',acr(e1));
-        [x,~,exitflag] = fsolve(@(x) ahomof(x,num,Link,target,m,Sigma,lin,e,d,N,d0,b0), x1,opt1);
+        [x,~,exitflag] = fsolve(@(x) ahomof(x,Link), x1,opt1);
     
     
         dist = x0 - x;
@@ -89,7 +91,7 @@ global pri eta e d lin N L Sigma m p
         e1 = x0(m+1)
   
     end
-    [x,fval,exitflag] = fsolve(@(x) [homof(x,num,Link,target,m,Sigma,lin,e,d,N);x(m+1)-1], x0,opt1);
+    [x,fval,exitflag] = fsolve(@(x) [homof(x,Link);x(m+1)-1], x0,opt1);
     PS = zeros(1,num);
     for i = 1:num
         PS(i) = min(x(2*i-1),x(2*i));

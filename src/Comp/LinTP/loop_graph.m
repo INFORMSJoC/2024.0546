@@ -1,5 +1,9 @@
 function z = loop_graph(numP)
-%all possible unweighted networks
+% loop_graph: all possible networks when assuming the agents
+% are located on a circle.
+% Input: L, the number of links.
+% Output: a 2^L*L matrix whose each row represents a possible network.
+
 numG = 2.^numP;
 numL = numP;
 z0 = zeros(numG,numL);

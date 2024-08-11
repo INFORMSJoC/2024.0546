@@ -1,4 +1,4 @@
-  %pairwise stable network, main program
+%pairwise stable network, main program
 %connection model: we can change values of players
 clc;
 clear;
