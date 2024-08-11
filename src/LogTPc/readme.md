@@ -53,7 +53,7 @@ functions `F.m`, `def.m` and `homof.m`.
 
  	Output: y, the value of the homotopy system (in [0,1]^{2L}).
 
-- `ahomof.m`: the system of equations in the corrector step.
+- `ahomof.m`: the system of equations to solve in the corrector step.
  
  	Input: x, the point x in [0,1]^{2L+1}.
 
