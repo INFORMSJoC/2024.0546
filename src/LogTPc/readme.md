@@ -60,8 +60,7 @@ implementation of the predictor-corrector method.
 # Application
 The codes in this folder handle a patent race model of Goyal & Joshi (2006). As argued in our paper, the utility functions in the patent race model are sometimes not concave. As a result, the algorithm may end at some networks that are not pairwise stable. To solve this problem, we draw the graphs of the utility functions via `check_PS.m`. With the graphs, one can easily check the pairwise stability of a certain network, according to our Theorem 2.
 
-When applying LogTPc to a new problem, one has to adjust the parameters in `main.m` and the formulas in `def.m`. We show an example in folder  `Version:public-good`. This version applies to the public good provision model of Bramoulle & Kranton (2007), which is investigated in Section 5.4 of our paper. 
-
+When applying LogTPc to a new problem, one has to adjust the parameters in `main.m` and the formulas in `def.m`. We show an example in folder  `Version:public-good`. This version applies to the public good provision model of Bramoulle & Kranton (2007), which is investigated in Section 5.4 of our paper. (It is different from the version shown in `src/LogTPc` in the parameter settings in `main.m` and formulas in `def.m`.)
 
 
 # References
