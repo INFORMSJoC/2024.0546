@@ -1,5 +1,5 @@
 function y = insert(net,Link)
-% insert: combine the nonrobust links with the robust ones
+% insert: to combine the nonrobust links with the robust ones.
 % Input: a num*1 vector net, recording the strengths of the non-robust
 % links in a subnetwork; Link in [0,1]^L, a vector that records the structure of the subnetwork.
 % Output: a network in [0,1]^L derived from Link by replacing
