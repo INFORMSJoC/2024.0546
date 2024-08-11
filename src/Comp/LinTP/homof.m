@@ -1,7 +1,7 @@
 function z = homof(x0)
-% homof: to compute the homotopy system
-% Input x: the point x0 in [0,1]^{4L+1}
-% output y: the value of the homotopy system (in [0,1]^{4L})
+% homof: to compute the homotopy system.
+% Input: x0, a point in [0,1]^{4L+1}.
+% Output: y, the value of the homotopy system (in [0,1]^{4L}).
     global L M p lin
     sigma1 = zeros(L,1);
     sigma2 = zeros(L,1);
