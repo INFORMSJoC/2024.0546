@@ -15,10 +15,10 @@ of networks, and the implementation of LogTP to the subnetworks.
   Output: two N × N matrice M and D. A link ij is surely to be absent if
   Mij = 0 or Mji = 0. This link is sure to be established if Dij = 0 and Dji = 0.
   
-- `combine.m`: to summarize the results of `robust link.m` and prepare for the
+- `combine.m`: to summarize the results of `robust_link.m` and prepare for the
   decomposition.
   
-  Input: the matrice M and D derived from `robust link.m`.
+  Input: the matrice M and D derived from `robust_link.m`.
   
   Output: a N × N matrix ˜D. For link ij, ˜Dij = 0 if the link is surely to be absent
   or built and ˜Dij = 1 otherwise. With this matrix, we can decompose the network
@@ -27,8 +27,7 @@ of networks, and the implementation of LogTP to the subnetworks.
 - `search_subproblem.m`: to modify the results of the Matlab function `conncomp`
   in the decomposition step.
 
-  Input: S, the output of “conncomp(˜D)”; D, the N × N matrix derived from `robust_
-  link.m`; num S, the number of connected conponents computed by Matlab
+  Input: S, the output of “conncomp(˜D)”; D, the N × N matrix derived from `robust_link.m`; num S, the number of connected conponents computed by Matlab
   codes max(S).
   
   Output: group, a matrix of N columns. Each row of the matrix corresponds to
@@ -53,7 +52,9 @@ of networks, and the implementation of LogTP to the subnetworks.
   links in the subnetwork are set as −1.
 
   Output: PS in [0,1]^L, a pairwise stable subnetwork that we derive from Link by replacing
-  the −1’s with the results of LogTP; num, number of the non-robust links.
+  the −1’s with the results of LogTP (we do this with the function `insert.m`); num, number of the non-robust links.
+
+  We omit the introductions to the functions applied in LogTP. For more details, one may refer to the file `src/LogTPc/readme.md`.
 
 # Application
 
