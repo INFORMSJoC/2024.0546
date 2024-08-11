@@ -7,7 +7,7 @@ implementation of the predictor-corrector method.
 
 - `links.m`: % link: to show the set of all possible links.
   
-	Input numP: number of players.
+	Input: numP, number of players.
   
 	Output: a numP*2 matrix whose each row represents a possible link. For
  	example, the row given by (i,j) represents the link between agent i and j. 
@@ -21,7 +21,7 @@ implementation of the predictor-corrector method.
 
 - `u0.m`: to compute the elements of the homotopy system at t=0.
   
-  	Input: x: link strength; i in {1,2..L},j in {1,2}, index for the link and player (in the sense of "lin").
+  	Input: x, link strength; i in {1,2..L}, j in {1,2}, index for the link and player (in the sense of "lin").
   
 	Output: the 2*i-2+j -th element of the homotopy system at t=0.
 
@@ -45,15 +45,15 @@ implementation of the predictor-corrector method.
 
 - `homof.m`: to compute the homotopy system.
   
- 	Input x: the point x in [0,1]^{2L+1}.
+ 	Input: x, the point x in [0,1]^{2L+1}.
 
- 	Output y: the value of the homotopy system (in [0,1]^{2L}).
+ 	Output: y, the value of the homotopy system (in [0,1]^{2L}).
 
 - `ahomof.m`: the system of equations in the corrector step.
  
- 	Input x: the point x in [0,1]^{2L+1}.
+ 	Input: x, the point x in [0,1]^{2L+1}.
 
- 	Output y: the value of the system of equations in the corrector step (in [0,1]^{2L+1}).
+ 	Output: y, the value of the system of equations in the corrector step (in [0,1]^{2L+1}).
 
 
 
