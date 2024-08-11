@@ -3,14 +3,14 @@ DAE is the insightful approach of Leung (2020) that computes pairwise stable net
 i.e. the utility function of each agent only depends on his direct connections. 
 Its basic idea is to first figure out the links that are surely to be absent or built. These links decompose the whole network into smaller ones, to which we then conduct an exhaustive searching.
 
-In this folder, we show the our implementation of DAE and distribute it along with our algorithm LogTP.
+In this folder, we show our implementation of DAE and distribute it along with our algorithm LogTP.
 
 - `main.m`: the main program of ALogTP, including the parameter settings, decomposition
 of networks, and the implementation of LogTP to the subnetworks.
 
 - `dvalue.m`: to compute the difference of payoff in a given network.
  
-   Input: N, e, d, paramters for the problem; net in [0,1]^L, a given
+   Input: N, e, d, parameters for the problem; net in [0,1]^L, a given
   network; i, j, the corresponding agents; lin, output of `link.m`.
   
   Output: y, the difference (between the cases xij = 1 ad xij=0) of agent i's payoff functions in a given network.
@@ -48,10 +48,10 @@ of networks, and the implementation of LogTP to the subnetworks.
   computed by Matlab codes max(S).
   
   Output: group, a matrix of N columns. Each row of the matrix corresponds to
-  a subnetwork. Its (i, j)-th element equals to 1 if agent j is included in the i-th
+  a subnetwork. Its (i, j)-th element equals 1 if agent j is included in the i-th
   subnetwork and 0 otherwise.
   
-- `solution1.m`: to figure out the non-robust links in a subnetwork and then conduct an exhuastive searching. (in this process, we label all the candidate network with the function `decom`.
+- `solution1.m`: to figure out the non-robust links in a subnetwork and then conduct an exhaustive searching. (in this process, we label all the candidate networks with the function `decom`.
   
   Input: group, a 1 × N vector that records a subnetwork.
 
@@ -60,10 +60,8 @@ of networks, and the implementation of LogTP to the subnetworks.
 
 
 # Application
-We compare DAE with our algorithm LogTP in Section 5.4 of our paper upon a public good provision model of Bramoulle & Kranton (2007).
+We compare DAE with our algorithm LogTP in Section 5.4 of our paper on a public good provision model of Bramoulle & Kranton (2007).
 
 # References
 1. Leung, M. P. (2020). Equilibrium computation in discrete network games. Quantitative Economics, 11:1325–1347.
 2. Bramoulle Y, Kranton R (2007). Public goods in networks. Journal of Economic Theory, 135:478–494.
-
-
