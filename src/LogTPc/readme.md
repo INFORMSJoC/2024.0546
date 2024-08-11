@@ -5,6 +5,10 @@ In its implement, we require the following code files:
 - `main.m`: the main program of LogTPc, including the parameter settings and the
 implementation of the predictor-corrector method.
 
+	We initialize the algorithm with
+functions `init.m` and `u0.m`. In the iterations, we compute the homotopy mapping with
+functions `F.m`, `def.m` and `homof.m`.
+
 - `links.m`: to show the set of all possible links.
   
 	Input: N, number of players.
