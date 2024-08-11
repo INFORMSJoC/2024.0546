@@ -1,6 +1,6 @@
 function z = def(s,x)
-% def: To compute the partial deriatives of the utility functions at point s in [0,1]^{2L} with
-% respect to a given network x
+% def: To compute the partial derivatives of the utility functions at point s in [0,1]^{2L} with
+% respect to a given network x.
 % Input: s in [0,1]^{2L}, the vector of favorite strengths; x: a network in
 % in [0,1]^{L}.
 % output: a N*N matrix whose (i,j) and (j,i) -th element equals to the
