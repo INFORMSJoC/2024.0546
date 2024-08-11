@@ -38,7 +38,7 @@ We compare LinTP with our algorithm LogTP in Section 5.3 of our paper upon a con
   
 - `def.m`: To compute the partial derivatives of the utility functions with respect to a given network.
   
-   Input net: a network in [0,1]^{L}.
+   Input: net, a network in [0,1]^{L}.
   
    Output: a N × N matrix whose (i,j) and (j,i) -th element represents the
    partial derivatives of i's and j's utility functions with respect to link
