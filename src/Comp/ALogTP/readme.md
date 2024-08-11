@@ -52,7 +52,7 @@ of networks, and the implementation of LogTP to the subnetworks.
   links in the subnetwork are set as −1.
 
   Output: PS in [0,1]^L, a pairwise stable subnetwork that we derive from Link by replacing
-  the −1’s with the results of LogTP (we do this with the function `insert.m`); num, number of the non-robust links.
+  the −1’s with the results of LogTP (we achieve this substitution with the function `insert.m`); num, number of the non-robust links.
 
   We omit the introductions to the functions applied in LogTP. For more details, one may refer to the file `src/LogTPc/readme.md`.
 
