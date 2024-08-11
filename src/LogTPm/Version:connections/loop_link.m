@@ -1,8 +1,8 @@
 function z = loop_link(numP)
 % loop_link: to show the set of all possible links when assuming the agents
-% are located on a circle
-% Input numP: number of players 
-% output: a numP*2 matrix whose each row represents a possible link. For
+% are located on a circle.
+% Input numP: number of players. 
+% Output: a numP*2 matrix whose each row represents a possible link. For
 % example, the row given by (i,j) represents the link between agent i and j. 
     z = zeros(numP,2);
     for i = 1:numP-1
