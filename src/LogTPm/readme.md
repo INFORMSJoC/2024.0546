@@ -18,7 +18,7 @@ We compute the partial derivatives with the codes in:
   
   Output: a 2^L*N matrix Va whose each row corresponds to the payoff vector.
   
-- `def.m`: To compute the partial derivatives of the utility functions with respect to a given network.
+- `def.m`: to compute the partial derivatives of the utility functions with respect to a given network.
   
    Input net: a network in [0,1]^{L}.
   
