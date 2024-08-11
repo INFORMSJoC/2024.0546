@@ -2,7 +2,7 @@ function [PS,num] = path_following(Link)
 % path_following: the main program of LogTP, which is applied to the subnetworks.
 % Input: Link in [0,1]^L, a vector that records the structure of the subnetwork.
 % Output: PS, a pairwise stable subnetwork that we derive from Link by replacing
-% the −1%s with the results of LogTP; num, number of the non-robust links.
+% the −1s with the results of LogTP; num, number of the non-robust links.
 global pri eta L Sigma m p num target d0 b0
     opt1 = optimset('Display','off'); 
     tol0 = 1.0e-2;   %velocity 1
