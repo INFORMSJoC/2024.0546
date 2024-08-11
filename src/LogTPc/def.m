@@ -1,9 +1,9 @@
 function z = def(s,x)
 % def: to compute the partial derivatives of the utility functions at point s in [0,1]^{2L} with
 % respect to a given network x.
-% Input: s in [0,1]^{2L}, the vector of favorite strengths; x: a network in
+% Input: s in [0,1]^{2L}, the vector of favorite strengths; x, a network in
 % in [0,1]^{L}.
-% output: a N*N matrix whose (i,j) and (j,i) -th element equals to the
+% Output: a N*N matrix whose (i,j) and (j,i) -th element equals to the
 % partial drivatives of agent i and j's utility functions with respect to
 % link ij, resepectively.
    global N lin L alpha
