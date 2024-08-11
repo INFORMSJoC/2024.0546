@@ -27,11 +27,11 @@ of networks, and the implementation of LogTP to the subnetworks.
 - `search_subproblem.m`: to modify the results of the Matlab function `conncomp`
   in the decomposition step.
 
-  Input: S, the output of “conncomp(˜D)”; D, the N × N matrix derived from `robust_link.m`; num S, the number of connected conponents computed by Matlab
+  Input: S, the output of “conncomp(˜D)”; D, the N × N matrix derived from `robust_link.m`; num S, the number of connected components computed by Matlab
   codes max(S).
   
   Output: group, a matrix of N columns. Each row of the matrix corresponds to
-  a subnetwork. Its (i, j)-th element equals to 1 if agent j is included in the i-th
+  a subnetwork. Its (i, j)-th element equals 1 if agent j is included in the i-th
   subnetwork and 0 otherwise.
   
 - `solution.m`: to figure out the non-robust links in a subnetwork and then apply
@@ -63,4 +63,3 @@ The codes in this folder consider the public good provision model of Bramoulle a
 # References
 1. Leung, M. P. (2020). Equilibrium computation in discrete network games. Quantitative Economics, 11:1325–1347.
 2. Bramoulle Y, Kranton R (2007). Public goods in networks. Journal of Economic Theory, 135:478–494.
-
