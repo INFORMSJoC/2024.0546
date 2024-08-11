@@ -1,8 +1,8 @@
 function z = floyd(graph,N)
 % Floyd algorithm
-% Input: net, a network in [0,1]^L; N, number of players.
+% Input: graph, a network in [0,1]^L; N, number of players.
 % Output: a N*N matrix whose (i,j)-th element represents the shortest
-% distance between agent i and j in the network net.
+% distance between agent i and j in the network.
         z = 999*ones(N,N);
         for j = 1:N-1
             if graph(j) == 1
