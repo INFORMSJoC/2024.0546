@@ -3,7 +3,8 @@ LinTP is the algorithm of Herings & Zhan (2024) that computes pairwise stable ne
 Herings & Zhan (2024) establish the equivalence between pairwise stable networks and Nash equilibria of certain noncooperative games. They then apply the linear tracing procedure
 of Harsanyi & Selten (1988) to select and compute the pairwise stable networks.
 
-LinTP is similar to LogTPc since it also applies a predictor-corrector method to numerically trace a homotopy path. The only difference is that their path is determined by a homotopy system of a higher dimension.
+In this folder, we show the our implementation of LinTP and distribute it along with our algorithm LogTP.
+LinTP is similar to LogTPc since it also applies a predictor-corrector method to numerically trace a homotopy path. The only difference is that their path is determined by a homotopy system of a higher dimension. 
 
 We compare LinTP with our algorithm LogTP in Section 5.3 of our paper upon a connections model of Jackson & Wolinsky (1996).
 
