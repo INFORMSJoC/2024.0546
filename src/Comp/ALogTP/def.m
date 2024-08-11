@@ -5,7 +5,7 @@ function z = def(s,Link,x)
 % x in [0,1]^L, a given network.
 % Output: a num*N whose (i,j) -th element represents the partial derivatives
 % of agent j's utility function with respect to the i-th link.
-% (corresponding to the i-th row of the out put of lin)
+% (corresponding to the i-th row of the output of "link.m")
 global e d lin N num target
 z = zeros(num, N); 
 
