@@ -1,8 +1,8 @@
 function y = init(Link)
-% init: to search for the starting point of the homotopy path
+% init: to search for the starting point of the homotopy path.
 % Input: Link in [0,1]^L, a vector that records the structure of the subnetwork.
-% output: a 2num*1 vector y such that [y;0] is the starting point of the
-% homotopy path
+% Output: a 2num*1 vector y such that [y;0] is the starting point of the
+% homotopy path.
 global L Sigma m lin num target
 opt1 = optimset('Display','off');
 % y = fsolve(@(x) u0(x), Sigma ,opt1);
