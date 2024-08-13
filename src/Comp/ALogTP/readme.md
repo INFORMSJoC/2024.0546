@@ -3,6 +3,15 @@ Inspired by the approach of Leung (2020), we developed ALogTP, an accelerated ve
 i.e. the utility function of each agent only depends on his direct connections. 
 Its basic idea is to first figure out the links that are sure to be absent or built. These links decompose the whole network into smaller ones, to which we then apply LogTP.
 
+# Outline
+We first figure the robust links in the problem with the functions `robust links.m`
+and `combine.m`. Then we decompose the network into smaller ones with the
+Matlab function `conncomp` and figure out the agents involved in the subnetworks
+with `search subproblem.m`. Finally, we apply LogTP to the subnetworks via
+functions `solution.m` and `path-following.m`.
+
+# Technical details
+
 - `main.m`: the main program of ALogTP, including the parameter settings, decomposition
 of networks, and the implementation of LogTP to the subnetworks.
 
