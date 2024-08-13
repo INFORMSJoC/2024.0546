@@ -17,7 +17,7 @@ implementation of the predictor-corrector method.
 	link. For example, the row given by (i, j) represents the link between agent i and
 	j.
 
-- `init.m`:  to search for the starting point of the homotopy path.
+- `init.m`:  to search for the starting point of the homotopy path by solving the equations given by `u0.m` with the Matlab function `fsolve`.
   
  	Input: none.
  
