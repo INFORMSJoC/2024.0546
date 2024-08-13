@@ -1,5 +1,5 @@
 function D = values(gra)
-% values: to compute the payoff vectors in each possible network.
+% values: to compute the payoff vectors in the unweighted networks.
 % Input: gra, a 2^L*L matrix recording all possible networks.
 % Output: a 2^L*N matrix whose each row corresponds to a payoff vector
 % of a unweighted network.
