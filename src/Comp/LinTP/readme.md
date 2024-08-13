@@ -49,7 +49,7 @@ We compare LinTP with our algorithm LogTP in Section 5.3 of our paper on a conne
   
    Output: y, the value of the homotopy system (in [0,1]^{4L}).
 
-- `ahomof.m`: the system of equations in the corrector step.
+- `ahomof.m`: the system of equations to solve in the corrector step.
   
    Input: x, a point in [0,1]^{4L+1}.
 
