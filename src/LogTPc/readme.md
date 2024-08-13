@@ -7,6 +7,7 @@ We find the starting point of the path with our Matlab functions `init.m` and `u
 In the iterations, we compute the value of the mapping H with Matlab functions `F.m`, `def.m` and `homof.m`. In the corrector step, we solve the equations regarding H with the Matlab function `fsolve`.
 
 # Technical details
+
 - `main.m`: the main program of LogTPc, including the parameter settings and the
 implementation of the predictor-corrector method.
 
@@ -61,12 +62,11 @@ implementation of the predictor-corrector method.
 
  	Output: y, the value of the system of equations in the corrector step (in [0,1]^{2L+1}).
 
-
-
 # Application
 The codes in this folder handle a patent race model of Goyal & Joshi (2006). As argued in our paper, the utility functions in the patent race model are sometimes not concave. As a result, the algorithm may end at some networks that are not pairwise stable. To solve this problem, we draw the graphs of the utility functions via `check_PS.m`. With the graphs, one can easily check the pairwise stability of a certain network, according to our Theorem 2.
 
-When applying LogTPc to a new problem, one has to adjust the parameters in `main.m` and the formulas in `def.m`. We show an example in folder  `Version:public-good`. This version applies to the public good provision model of Bramoulle & Kranton (2007), which is investigated in Section 5.4 of our paper. (It is different from the version shown in `src/LogTPc` in the parameter settings in `main.m` and formulas in `def.m`.)
+When applying LogTPc to a new problem, one has to adjust the parameters in `main.m` and the formulas in `def.m` and `u0.m`. In folder  `src/LogTPc/Version:public-good`, we present the verison
+applied to a public good provision model of Bramoulle & Kranton (2007) in Section 5.4 of our paper. We remove the redundant copies of codes. To derive the whole software, we only have to substitute the code files `main.m` , `def.m` and `u0.m` with the corresponding ones in the folder `src/LogTPc/Version:public-good`.
 
 
 # References
