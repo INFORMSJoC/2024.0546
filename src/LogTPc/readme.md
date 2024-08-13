@@ -26,7 +26,7 @@ implementation of the predictor-corrector method.
 
 - `u0.m`: to compute the elements of the homotopy system at t=0.
   
-  	Input: x, link strength; i in {1,2..L}, j in {1,2}, index for the link and player (in the sense of "lin").
+  	Input: x in [0,1], link strength; i in {1,2..L}, j in {1,2}, index for the link and player (in the sense of "lin").
   
 	Output: the 2i-2+j -th element of the homotopy system at t=0.
 
