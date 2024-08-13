@@ -1,7 +1,6 @@
 function [sol,indicator] = solution(group)
-% solution.m: to figure out the non-robust links in a subnetwork and then apply
-% LogTP to compute the corresponding pairwise stable subnetwork (to determine
-% the strength of the non-robust links).
+% solution.m:  to figure out a pairwise stable subnetwork with LogTP. To do so, we first generate a vector Link in [0,1]^L that records the structure of the subnetwork. Precisely, the strengths of the links not included in the subnetwork equal zero. (In problems with a sparse structure, it makes no difference when computing the utility functions and their partial derivatives) The robustly absent or built links have strength 0 or 1, respectively. The strengths of the non-robust links in the subnetwork are set as −1. 
+% We denote the number of non-robust links by num. We tackle the subproblem with path-following.m, the main program of LogTP, with input Link in [0,1]^L.
 % Input: group, a 1 × N vector that records the players in a subnetwork.
 % Output: sol in [0,1]^L, a pairwise stable subnetwork; indicator, the number of nonrobust
 % links in this subnetwork.
