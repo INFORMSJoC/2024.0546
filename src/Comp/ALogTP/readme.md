@@ -74,8 +74,8 @@ Input: Link in [0,1]^L, a network records the structure of the subnetwork.
 Output: PS in [0,1]^L, a pairwise stable subnetwork that we derive from Link by
 replacing the −1’s with the results of LogTP; num, number of the non-robust links.
 
-	There are a few adjustments to the codes of LogTP since we have to take the structure of the subnetwork into consideration. That is, we have to combine the strengths of the non-robust links and the robust ones with the Matlab function `insert.m` before the computations. Therefore, we add an input parameter Link in [0,1]^L for the functions in LogTP. 
-	Besides, we change the output of function `def.m`. Now it returns a num × N matrix whose (i,j) -th element represents the partial derivative of agent j's utility function with respect to the i -th non-robust link in the subnetwork.
+There are a few adjustments to the codes of LogTP since we have to take the structure of the subnetwork into consideration. That is, we have to combine the strengths of the non-robust links and the robust ones with the Matlab function `insert.m` before the computations. Therefore, we add an input parameter Link in [0,1]^L for the functions in LogTP. 
+Besides, we change the output of function `def.m`. Now it returns a num × N matrix whose (i,j) -th element represents the partial derivative of agent j's utility function with respect to the i -th non-robust link in the subnetwork.
 
 # Application
 
