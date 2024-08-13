@@ -2,7 +2,7 @@ function f = homof(x,Link)
 % homof: to compute the homotopy system.
 % Input: x, a point in [0,1]^{2num+1}; Link in [0,1]^L, a vector that
 % records the structure of the subnetwork.
-% Output: y, the value of the homotopy system (in [0,1]^{2num}).
+% Output: f, the value of the homotopy system (in [0,1]^{2num}).
 global pri eta lin Sigma m p num target
     f = zeros(m,1);
     t = x(m+1);
