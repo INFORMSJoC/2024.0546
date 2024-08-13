@@ -32,7 +32,7 @@ the non-robust links and the robust ones.
   subproblems. We figure out the connected components via the Matlab function
   `conncomp`.
   
-- `search subproblem.m`: to figure out the agents involved in each subproblem. A
+- `search_subproblem.m`: to figure out the agents involved in each subproblem. A
   subproblem contains the agents in a connected component of the graph given by
   ˜D and the agents connected to them via a robustly built link.
   
