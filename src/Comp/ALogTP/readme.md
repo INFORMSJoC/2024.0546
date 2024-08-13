@@ -67,18 +67,15 @@ the non-robust links and the robust ones.
   
 - `path-following.m`: the main program of LogTP, applied to the subnetworks.
 Here we handle a homotopy system of 2num variables, corresponding to
-the non-robust links. (each non-robust link corresponds to 2 variables) There are a few adjustments to the codes when computing
-the partial derivatives of the utility functions: we have to combine the strengths
-of the non-robust links and the robust ones with the Matlab function `insert.m`
-before the computation. The rest codes are the same as the basic version
-LogTPc.
+the non-robust links. (each non-robust link corresponds to 2 variables)
 
 Input: Link in [0,1]^L, a network records the structure of the subnetwork.
 
 Output: PS in [0,1]^L, a pairwise stable subnetwork that we derive from Link by
 replacing the −1’s with the results of LogTP; num, number of the non-robust links.
 
-We omit the introductions to the functions applied in LogTP. For more details, one may refer to the file `src/LogTPc/readme.md` or `src/Manual.pdf`.
+	There are a few adjustments to the codes of LogTP since we have to take the structure of the subnetwork into consideration. That is, we have to combine the strengths of the non-robust links and the robust ones with the Matlab function `insert.m` before the computations. Therefore, we add an input parameter Link in [0,1]^L for the functions in LogTP. 
+	Besides, we change the output of function `def.m`. Now it returns a num × N matrix whose (i,j) -th element represents the partial derivative of agent j's utility function with respect to the i -th non-robust link in the subnetwork.
 
 # Application
 
