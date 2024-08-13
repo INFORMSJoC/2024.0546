@@ -4,10 +4,11 @@ Herings & Zhan (2024) establish the equivalence between pairwise stable networks
 of Harsanyi & Selten (1988) to select and compute the pairwise stable networks.
 
 In this folder, we show our implementation of LinTP and distribute it along with our algorithm LogTP.
-LinTP is similar to LogTPc since it also applies a predictor-corrector method to numerically trace a homotopy path. However, their paths are determined by different homotopy systems. 
+LinTP is similar to LogTPc since it also applies a predictor-corrector method to numerically trace a homotopy path. However, their paths are determined by a different homotopy system. 
 
 We compare LinTP with our algorithm LogTP in Section 5.3 of our paper on a connections model of Jackson & Wolinsky (1996).
 
+# Technical details
 - `main.m`: the main program of LinTP, including the parameter settings and the
   implementation of the predictor-corrector method.
 
