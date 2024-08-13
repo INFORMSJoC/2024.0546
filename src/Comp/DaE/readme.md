@@ -59,7 +59,7 @@ of networks, and the implementation of LogTP to the subnetworks.
   links in this subnetwork.
 
 
-# Application
+# Applications
 We compare DAE with our algorithm LogTP in Section 5.4 of our paper on a public good provision model of Bramoulle & Kranton (2007).
 
 # References
