@@ -1,6 +1,6 @@
 function group = search_subproblem(N,S,D,num_s)
 % search_subproblem: to modify the results of the Matlab function “conncomp”
-% in the decomposition step.
+% in the decomposition step and figure out the agents involved in each subproblem.
 % Input: S, the output of "conncomp(˜D)”; D, the N × N matrix derived from “robust
 % link.m”; num S, the number of connected conponents computed by Matlab
 % codes max(S).
