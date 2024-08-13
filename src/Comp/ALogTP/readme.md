@@ -54,25 +54,26 @@ the non-robust links and the robust ones.
   LogTP, with input Link in [0,1]^L.
 
   Input: group, a 1 × N vector that records players in a subnetwork.
+  
   Output: sol in [0,1]^L, a pairwise stable subnetwork; num, the number of non-robust
   links in this subnetwork.
   
 - `insert.m`: to combine the strengths of the non-robust links and robust ones.
   
-  Input: x in [0, 1]^num, a vector recording the strengths of the non-robust links;
+   Input: x in [0, 1]^num, a vector recording the strengths of the non-robust links;
   Link in [0,1]^L, a vector that records the structure of the subnetwork.
   
-  Output: a network in [0,1]^L derived from Link by replacing the −1s with the elements
-  in x.
+   Output: a network in [0,1]^L derived from Link by replacing the −1s with the elements
+   in x.
   
 - `path-following.m`: the main program of LogTP, applied to the subnetworks.
 Here we handle a homotopy system of 2num variables, corresponding to
 the non-robust links. (each non-robust link corresponds to 2 variables)
 
-Input: Link in [0,1]^L, a network records the structure of the subnetwork.
-
-Output: PS in [0,1]^L, a pairwise stable subnetwork that we derive from Link by
-replacing the −1’s with the results of LogTP; num, number of the non-robust links.
+	Input: Link in [0,1]^L, a network records the structure of the subnetwork.
+	
+	Output: PS in [0,1]^L, a pairwise stable subnetwork that we derive from Link by
+	replacing the −1’s with the results of LogTP; num, number of the non-robust links.
 
 There are a few adjustments to the codes of LogTP since we have to consider the structure of the subnetwork. That is, we have to combine the strengths of the non-robust links and the robust ones with the Matlab function `insert.m` before the computations. Therefore, we add an input parameter Link in [0,1]^L for the functions in LogTP. There are no major changes to the codes except for those in `def.m`.
 	We adjust the output of the function `def.m`. Now it returns a $num \times N$ matrix whose (i,j) -th element represents the partial derivative of agent j's utility function with respect to the $i$ -th non-robust link in the subnetwork.
