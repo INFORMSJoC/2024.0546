@@ -18,7 +18,7 @@ We compare LinTP with our algorithm LogTP in Section 5.3 of our paper on a conne
   
 	 Output: a numP*2 matrix lin whose each row represents a possible link. For example, the row given by (i,j) represents the link between agent i and j. 
 
-- `loop_graphs.m`:  to show the set of all possible unweighed networks when assuming the agents are located on a circle.
+- `loop_graph.m`:  to show the set of all possible unweighed networks when assuming the agents are located on a circle.
   
   Input: L, the number of links.
   
@@ -26,7 +26,7 @@ We compare LinTP with our algorithm LogTP in Section 5.3 of our paper on a conne
   
 - `loop_values.m`: to compute the payoff vectors in each possible network when assuming the agents are located on a circle.
   
-  Input: gra, a 2^L × L matrix recording all possible networks derived from `graphs.m`.
+  Input: gra, a 2^L × L matrix recording all possible networks derived from `loop_graph.m`.
   
   Output: a 2^L × N matrix Va whose each row corresponds to the payoff vector.
 
