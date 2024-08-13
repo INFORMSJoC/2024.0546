@@ -16,7 +16,7 @@ We compare LinTP with our algorithm LogTP in Section 5.3 of our paper on a conne
   
 	 Input: numP, number of players.
   
-	 Output: a numP*2 matrix lin whose each row represents a possible link. For example, the row given by (i,j) represents the link between agent i and j. 
+	 Output: a numP × 2 matrix lin whose each row represents a possible link. For example, the row given by (i,j) represents the link between agent i and j. 
 
 - `loop_graph.m`:  to show the set of all possible unweighed networks when assuming the agents are located on a circle.
   
