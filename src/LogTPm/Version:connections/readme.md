@@ -4,7 +4,7 @@ In this folder, we show the version of LogTPm applied to a connections model of 
 # Technical details
 - `main.m`: the main program of LogTPm, including the parameter setting in the connections model.
   
-- `floyd.m': to compute the shortest distance between the agents in a given network with the well-known floyd algorithm. We require these data later in `loop_values.m`.
+- `floyd.m`: to compute the shortest distance between the agents in a given network with the well-known floyd algorithm. We require these data later in `loop_values.m`.
 
   Input: net, a network in [0,1]^L; N, number of players.
 
