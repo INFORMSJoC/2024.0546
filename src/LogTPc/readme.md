@@ -15,7 +15,7 @@ implementation of the predictor-corrector method.
   
 	Input: N, number of players.
 
-	Output: a L × 2 matrix lin (global variable) whose each row represents a possible
+	Output: an L × 2 matrix lin (global variable) whose each row represents a possible
 	link. For example, the row given by (i, j) represents the link between agent i and
 	j.
 
@@ -46,7 +46,7 @@ implementation of the predictor-corrector method.
  	Input: s in [0,1]^{2L}, the vector of favorite strengths; x: a network in
  	in [0,1]^{L}.
  
- 	Output: a N*N matrix whose (i,j) and (j,i) -th element equals to the
+ 	Output: an N*N matrix whose (i,j) and (j,i) -th element equals to the
 	partial derivatives of agent i and j's utility functions with respect to
 	link ij, respectively.
 
@@ -65,8 +65,8 @@ implementation of the predictor-corrector method.
 # Application
 The codes in this folder handle a patent race model of Goyal & Joshi (2006). As argued in our paper, the utility functions in the patent race model are sometimes not concave. As a result, the algorithm may end at some networks that are not pairwise stable. To solve this problem, we draw the graphs of the utility functions via `check_PS.m`. With the graphs, one can easily check the pairwise stability of a certain network, according to our Theorem 2.
 
-When applying LogTPc to a new problem, one has to adjust the parameters in `main.m` and the formulas in `def.m` and `u0.m`. In folder  `src/LogTPc/Version:public-good`, we present the verison
-applied to a public good provision model of Bramoulle & Kranton (2007) in Section 5.4 of our paper. We remove the redundant copies of codes. To derive the whole software, we only have to substitute the code files `main.m` , `def.m` and `u0.m` with the corresponding ones in the folder `src/LogTPc/Version:public-good`.
+When applying LogTPc to a new problem, one has to adjust the parameters in `main.m` and the formulas in `def.m` and `u0.m`. In folder  `src/LogTPc/Version:public-good`, we present the version
+applied to a public good provision model of Bramoulle & Kranton (2007) in Section 5.4 of our paper. We remove the redundant copies of codes. To derive the whole software, we only have to substitute the code files `main.m`, `def.m`, and `u0.m` with the corresponding ones in the folder `src/LogTPc/Version:public-good`.
 
 
 # References
