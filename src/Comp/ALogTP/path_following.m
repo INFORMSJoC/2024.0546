@@ -1,5 +1,6 @@
 function [PS,num] = path_following(Link)
-% path_following: the main program of LogTP, which is applied to the subnetworks.
+% path_following: the main program of LogTP, applied to the subnetworks. Here we handle a homotopy system of 2num variables, corresponding to the non-robust links. 
+% (each non-robust link corresponds to 2 variables)
 % Input: Link in [0,1]^L, a vector that records the structure of the subnetwork.
 % Output: PS, a pairwise stable subnetwork that we derive from Link by replacing
 % the −1s with the results of LogTP; num, number of the non-robust links.
