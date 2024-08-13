@@ -1,9 +1,6 @@
 # Manual for ALogTP
 Inspired by the approach of Leung (2020), we developed ALogTP, an accelerated version of LogTP, that applies to problems with a sparse structure.
-i.e. the utility function of each agent only depends on his direct connections. 
-Its basic idea is to first figure out the links that are sure to be absent or built. These links decompose the whole network into smaller ones, to which we then apply LogTP.
-
-# Outline
+i.e. the utility function of each agent only depends on the direct connections. 
 We first figure the robust links in the problem with the functions `robust links.m`
 and `combine.m`. Then we decompose the network into smaller ones with the
 Matlab function `conncomp` and figure out the agents involved in the subnetworks
@@ -21,17 +18,17 @@ of networks, and the implementation of LogTP to the subnetworks.
   Kranton (2007) as an example. (in Section 5.4 of our paper) e, the effort
   vector; d > 0, cost for links.
   
-  Output: two N × N matrice M and D. A link ij is surely to be absent if
-  Mij = 0 or Mji = 0. This link is sure to be established if Dij = 0 and Dji = 0.
+  Output: two N × N matrice M and D. A link ij is robustly absent if
+  Mij = 0 or Mji = 0 and robustly built if Dij = 0 and Dji = 0.
   
 - `combine.m`: to summarize the results of `robust_link.m` and distinguish between
 the non-robust links and the robust ones.
   
   Input: the matrice M and D derived from `robust_link.m`.
   
-  Output: an N × N symmetric matrix ˜D. For link ij, ˜Dij = 0 if the link is surely to be absent
-  or built and ˜Dij = 1 otherwise. The matrix ˜D can be viewed as the
-  adjacency matrix of an undirect graph, whose connected components provide the
+  Output: an N × N symmetric matrix ˜D. For link ij, ˜Dij = 0 if it is robustly absent
+  or built and ˜Dij = 1 otherwise. The matrix ˜D is the
+  adjacency matrix of an undirect graph of N nodes, whose connected components provide the
   subproblems. We figure out the connected components via the Matlab function
   `conncomp`.
   
@@ -52,15 +49,15 @@ the non-robust links and the robust ones.
   (In problems with a sparse structure, it makes no difference when computing the
   utility functions and their partial derivatives) The robustly absent or built links
   have strength 0 or 1, respectively. The strengths of the non-robust links in the
-  subnetwork are set as −1. The number of non-robust links is denoted by num.
-  The subproblem is then tackled with `path-following.m` the main program of
+  subnetwork are set as −1. We denote the number of non-robust links by num.
+  We tackle the subproblem with `path-following.m`, the main program of
   LogTP, with input Link in [0,1]^L.
 
   Input: group, a 1 × N vector that records players in a subnetwork.
   Output: sol in [0,1]^L, a pairwise stable subnetwork; num, the number of non-robust
   links in this subnetwork.
   
-- `insert.m`: to combine the strengths of the nonrobust links and robust ones.
+- `insert.m`: to combine the strengths of the non-robust links and robust ones.
   
   Input: x in [0, 1]^num, a vector recording the strengths of the non-robust links;
   Link in [0,1]^L, a vector that records the structure of the subnetwork.
@@ -68,12 +65,12 @@ the non-robust links and the robust ones.
   Output: a network in [0,1]^L derived from Link by replacing the −1s with the elements
   in x.
   
-- `path-following.m`: the main program of LogTP, which is applied to the subnetworks.
-Here we handle a homotopy system of 2num dimensions, corresponding to
-the non-robust links. There are a few adjustments to the codes when computing
+- `path-following.m`: the main program of LogTP, applied to the subnetworks.
+Here we handle a homotopy system of 2num variables, corresponding to
+the non-robust links. (each non-robust link corresponds to 2 variables) There are a few adjustments to the codes when computing
 the partial derivatives of the utility functions: we have to combine the strengths
 of the non-robust links and the robust ones with the Matlab function `insert.m`
-before the computation. The rest technical details are the same as the basic version
+before the computation. The rest codes are the same as the basic version
 LogTPc.
 
 Input: Link in [0,1]^L, a network records the structure of the subnetwork.
