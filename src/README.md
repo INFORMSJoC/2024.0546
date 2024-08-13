@@ -7,7 +7,7 @@ This `src` folder contains codes of five algorithms for computing pairwise stabl
 
 Note that LogTP and ALogTP are the algorithms we developed in the paper. For DaE and LinTP, we show our own implementation and distribute them.
 
-For a more detailed introduction to our algorithm (LogTPc, LogTPm and ALogTP), see the file `src/Manual.pdf` or use the help function in Matlab.
+For a more detailed introduction to our algorithm, see the file `src/Manual.pdf` or use the help function in Matlab.
 
 # References
 1. Herings PJJ, Zhan Y (2024). The computation of pairwise stable networks. Mathematical Programming, 203:443–473.
