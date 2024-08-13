@@ -3,7 +3,7 @@ DAE is the insightful approach of Leung (2020) that computes pairwise stable net
 i.e. the utility function of each agent only depends on his direct connections. 
 Its basic idea is to first figure out the links that are surely to be absent or built. These links decompose the whole network into smaller ones, to which we then conduct an exhaustive searching.
 
-In this folder, we show our implementation of DAE and distribute it along with our algorithm LogTP.
+# Technical details
 
 - `main.m`: the main program of DAE, including the parameter settings, decomposition
 of networks, and the implementation of LogTP to the subnetworks.
@@ -37,7 +37,7 @@ of networks, and the implementation of LogTP to the subnetworks.
   
   Input: N, number of players; the matrice M and D derived from `robust_link.m`.
   
-  Output: a N × N matrix ˜D. For link ij, ˜Dij = 0 if the link is surely to be absent
+  Output: an N × N matrix ˜D. For link ij, ˜Dij = 0 if the link is surely to be absent
   or built and ˜Dij = 1 otherwise. With this matrix, we can decompose the network
   into smaller ones (via the Matlab function “conncomp(˜D )”).
   
