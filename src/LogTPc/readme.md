@@ -13,7 +13,7 @@ implementation of the predictor-corrector method.
   
 	Input: N, number of players.
 
-	Output: an L × 2 matrix lin (global variable) whose each row represents a possible
+	Output: an L × 2 matrix lin whose each row represents a possible
 	link. For example, the row given by (i, j) represents the link between agent i and
 	j.
 
