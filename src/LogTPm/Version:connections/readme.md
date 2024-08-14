@@ -22,13 +22,13 @@ In this folder, we show the version of LogTPm applied to a connections model of 
   
   Input: L, the number of links.
   
-  Output: a 2^L × L matrix gra whose each row represents a possible network. (global variable)
+  Output: a 2^L × L matrix whose each row represents a possible network. 
   
 - `loop_values.m`: to compute the payoff vectors in each possible network when assuming the agents are located on a circle.
   
   Input: gra, a 2^L × L matrix recording all possible networks derived from `loop_graph.m`; w, a 1 × N vector of social values in the connections model.
   
-  Output: a 2^L × N matrix Va whose each row corresponds to the payoff vector.
+  Output: a 2^L × N matrix whose each row corresponds to the payoff vector.
 
 # References
 1.Jackson MO, Wolinsky A (1996). A strategic model of social and economic networks. Journal of Economic Theory, 71:44–74.
