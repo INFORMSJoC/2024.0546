@@ -64,10 +64,10 @@ the non-robust links and the robust ones.
 
 - `check_PS.m`: to check whether the subnetwork is pairwise stable, applied in the exhaustive search.
   
- Input: a network net in [0,1]^L; e, d, N parameters of the problem;
- lin, output of "link.m".
-
- Output: z in {0,1}, net is pairwise stable if z=1 and 0 otherwise.
+  Input: a network net in [0,1]^L; e, d, N parameters of the problem;
+  lin, output of "link.m".
+ 
+  Output: z in {0,1}, net is pairwise stable if z=1 and 0 otherwise.
 
 
 # Applications
