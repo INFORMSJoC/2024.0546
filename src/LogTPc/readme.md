@@ -30,7 +30,7 @@ implementation of the predictor-corrector method.
   
 	Output: the 2i-2+j -th element of the homotopy system at t=0.
 
-- `F.m`: to combine the favorite strength via the decision of link players.
+- `F.m`: to combine the favorite strengths via the decision of link players.
  
  	Input: t in [0,1], t-value; s in [0,1]^{2L}, the vector of favorite
  	strengths; p in [0,1]^{3L}, the prior.
