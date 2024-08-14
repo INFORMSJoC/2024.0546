@@ -1,7 +1,8 @@
 % check_PS: to check whether a given network is pairwise stable (according
 % to our Theorem 2).
 % Input: k, R&D capability of firm 3; x0 in [0,1]^L, the target network.
-% Output: graphs of utility functions.
+% Output: graphs of utility functions. The graph "ij-i" shows the utility function of agent i when
+% determining the strength of link ij in network x0.
 
 k=4.56;
 x0 = [1,0,1]
