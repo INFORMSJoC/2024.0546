@@ -26,7 +26,7 @@ We compare LinTP with our algorithm LogTP in Section 5.3 of our paper on a conne
   
 - `loop_values.m`: to compute the payoff vectors in each possible network when assuming the agents are located on a circle.
   
-  Input: gra, a 2^L × L matrix recording all possible networks derived from `loop_graph.m`.
+  Input: gra, a 2^L × L matrix recording all possible networks; w, a 1 × N vector of social values in connections model.
   
   Output: a 2^L × N matrix Va whose each row corresponds to the payoff vector.
 
