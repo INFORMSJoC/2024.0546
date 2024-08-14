@@ -1,6 +1,6 @@
 function [M,D] = robust_links(N,e,d)
 % robust_links: to figure out the robust link
-% Input: parameters in the model. Take the public provision model of Bramoull´e and
+% Input: N, number of players; other parameters in the model. Take the public provision model of Bramoull´e and
 % Kranton (2007) as an example. (in Section 5.4 of our paper) e, the effort
 % vector; d > 0, cost for links.
 % Output: two N*N matrice M and D. A link ij is surely to be absent if
