@@ -18,13 +18,13 @@ of networks, and the implementation of LogTP to the subnetworks.
   Kranton (2007) as an example. (in Section 5.4 of our paper) e, the effort
   vector; d > 0, cost for links.
   
-  Output: two N × N matrice M and D. A link ij is robustly absent if
+  Output: two N × N matrices M and D. A link ij is robustly absent if
   Mij = 0 or Mji = 0 and robustly built if Dij = 0 and Dji = 0.
   
 - `combine.m`: to summarize the results of `robust_link.m` and distinguish between
 the non-robust links and the robust ones.
   
-  Input: the matrice M and D derived from `robust_link.m`.
+  Input: the matrices M and D derived from `robust_link.m`.
   
   Output: an N × N symmetric matrix ˜D. For link ij, ˜Dij = 0 if it is robustly absent
   or built and ˜Dij = 1 otherwise. The matrix ˜D is the
@@ -37,7 +37,7 @@ the non-robust links and the robust ones.
   ˜D and the agents connected to them via a robustly built link.
   
   Input: N, number of players; a 1 × N vector S, the output of “conncomp(˜D )”; D, the N × N matrix
-  derived from “robust link.m”; num S, the number of connected conponents.
+  derived from “robust link.m”; num S, the number of connected components.
   
   Output: group, a matrix of N columns. Each row of the matrix corresponds to
   a subnetwork. Its (i, j)-th element equals 1 if agent j is contained in the i-th
