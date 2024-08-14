@@ -54,7 +54,7 @@ The `results` folder contains the numerical results of algorithms reported in th
 
 `connections`: the comparison between algorithms `LogTPm` and `Comp/LinTP` for the connections model of Jackson & Wolinsky (1996), reported in Section 5.3.
 
-`public-good`: the comparison among algorithms `LogTPm`, `Comp/DaE` and `Comp/ALogTP` for the public good provision network problem introduced in Bramoulle and Kranton (2007), reported in Section 5.4.
+`public-good`: the comparison among algorithms `LogTPc`, `Comp/DaE` and `Comp/ALogTP` for the public good provision network problem introduced in Bramoulle and Kranton (2007), reported in Section 5.4.
 
 `Convergence to LinTP`: an example that shows the convergence of LogTP to LinTP as η approaches 0, reported in Section 4.2.
 
