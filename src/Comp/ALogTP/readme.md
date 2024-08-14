@@ -4,7 +4,7 @@ i.e. the utility function of each agent only depends on the direct connections.
 We first apply `robust_links.m` and `combine.m` to figure out the links that are sure to be absent or built, which we call robustly absent or built links.
 Then we decompose the network into smaller ones with the
 Matlab function `conncomp` and figure out the agents involved in the subnetworks
-with `search subproblem.m`. Finally, we apply LogTP to the subnetworks via
+with `search_subproblem.m`. Finally, we apply LogTP to the subnetworks via
 functions `solution.m` and `path-following.m`.
 
 # Technical details
