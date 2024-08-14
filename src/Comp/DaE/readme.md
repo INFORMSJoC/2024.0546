@@ -3,6 +3,7 @@ DAE is the insightful approach of Leung (2020) that computes pairwise stable net
 i.e. the utility function of each agent only depends on his direct connections. 
 Its basic idea is to first figure out the links that are robustly absent or built. These links decompose the whole network into smaller ones, for which we then conduct an exhaustive search.
 
+In this folder, we show our implementation of DAE and distribute it along with our algorithm LogTP.
 # Technical details
 
 - `main.m`: the main program of DAE, including the parameter settings, decomposition
