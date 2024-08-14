@@ -31,7 +31,7 @@ The rest parts of the codes are the same as LogTPc and we omit their introductio
 # Application
 
 The codes in this folder handle the coauthor model of Jackson & Wolinsky (1996). When applying LogTPm
-to a new model, the codes in `def.m` need not be adjusted . Instead, one has to adjust the formulas in `values.m` that compute the payoff the agents receive from the unweighted networks.
+to a new model, the codes in `def.m` need not be adjusted. Instead, one has to adjust the formulas in `values.m` that compute the payoff the agents receive from the unweighted networks.
 
 Another version of the connections model of Jackson & Wolisnky (1996) is shown in folder `src\LogTPm\Version: connections`, which is applied in Section 5.3. In this version, we assume the agents are located on a circle and then adjust the codes in `links.m`, `graphs.m`, and `values.m` accordingly. (We rename them by `loop_link.m`, `loop_graph.m` and `loop_values.m`.) In the folder, we remove the redundant copies of codes. To derive the whole software, one has to substitute the files `main.m`, `links.m`, `graphs.m`, and `values.m` with the corresponding ones in `src\LogTPm\Version: connections`. 
 
