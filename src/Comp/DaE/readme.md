@@ -38,7 +38,7 @@ the non-robust links and the robust ones.
   
   Input: the matrice M and D derived from `robust_link.m`.
   
-  Output: an N × N symmetric matrix ˜D. For link ij, ˜Dij = 0 if it is robustly absent
+  Output: N, number of players; an N × N symmetric matrix ˜D. For link ij, ˜Dij = 0 if it is robustly absent
   or built and ˜Dij = 1 otherwise. The matrix ˜D is the
   adjacency matrix of an undirect graph of N nodes, whose connected components provide the
   subproblems. We figure out the connected components via the Matlab function
