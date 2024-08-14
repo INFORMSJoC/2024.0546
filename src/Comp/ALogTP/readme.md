@@ -14,7 +14,7 @@ of networks, and the implementation of LogTP to the subnetworks.
 
 - `robust_links.m`: to figure out the robustly absent and built links.
   
-  Input: parameters in the model. Take the public provision model of Bramoull´e and
+  Input: N, number of players; other parameters in the model. Take the public provision model of Bramoull´e and
   Kranton (2007) as an example. (in Section 5.4 of our paper) e, the effort
   vector; d > 0, cost for links.
   
