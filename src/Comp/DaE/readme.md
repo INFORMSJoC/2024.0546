@@ -24,7 +24,7 @@ of networks, and the exhaustive search.
  
   Output: the payoff of agent i in network net.
 
-- `robust_links.m`: to figure out the robustly absent and built links by computing the maximum and minimum of the difference of utility functions. (with `dvalue.m`)
+- `robust_links.m`: to figure out the robustly absent and built links by computing the maximum and minimum of the difference of utility functions.
   
   Input: N, number of players and other parameters in the model. Take the public provision model of Bramoull´e and
   Kranton (2007) as an example. (in Section 5.4 of our paper) e, the effort
