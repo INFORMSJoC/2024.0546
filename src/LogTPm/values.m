@@ -1,10 +1,10 @@
-function D = values(gra)
+function Va = values(gra)
 % values: to compute the payoff vectors in the unweighted networks.
 % Input: gra, a 2^L*L matrix recording all possible networks.
 % Output: a 2^L*N matrix whose each row corresponds to a payoff vector
 % of a unweighted network.
     global G N c L lin
-    D = zeros(G,N);
+    Va = zeros(G,N);
     
     for i = 1:G
         invest = zeros(1,N);
@@ -25,7 +25,7 @@ function D = values(gra)
             end
             
             if invest(j) ~= 0
-                D(i,j) = temp -c*invest(j);
+                Va(i,j) = temp -c*invest(j);
             end
             
         end
