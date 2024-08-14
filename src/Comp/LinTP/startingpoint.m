@@ -1,7 +1,7 @@
 function z = startingpoint(p)
 % startingpoint: to determine the starting point of the homotopy path.
 % Input: p in [0,1]^L, a prior.
-% Output: z in [0,1]^{4L}, the starting point of the path.
+% Output: z in [0,1]^{4L+1}, the starting point of the path.
 
     global L M lin
     z = zeros(M+1,1);
