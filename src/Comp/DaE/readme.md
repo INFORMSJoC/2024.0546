@@ -60,7 +60,7 @@ the non-robust links and the robust ones.
   Input: group, a 1 × N vector that records a subnetwork; N, e, d, parameters of the problem; D, M, two matrice derived from `robust_links.m`.
 
   Output: sol, a subset of [0,1]^L that reports all pairwise stable subnetworks;  k, number of pairwise stable subnetworks; ind, the number of nonrobust
- links in this subnetwork.
+ links in these subnetworks.
 
 - `check_PS.m`: to check whether the subnetwork is pairwise stable, applied in the exhaustive search.
   
