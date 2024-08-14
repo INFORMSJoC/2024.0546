@@ -62,6 +62,13 @@ the non-robust links and the robust ones.
   Output: sol, a subset of [0,1]^L that reports all pairwise stable subnetworks; indicator, the number of nonrobust
   links in this subnetwork.
 
+- `check_PS.m`: to check whether the subnetwork is pairwise stable, applied in the exhaustive search.
+  
+ Input: a network net in [0,1]^L; e, d, N parameters of the problem;
+ lin, output of "link.m".
+
+ Output: z in {0,1}, net is pairwise stable if z=1 and 0 otherwise.
+
 
 # Applications
 We compare DAE with our algorithm LogTP in Section 5.4 of our paper on a public good provision model of Bramoulle & Kranton (2007).
