@@ -6,7 +6,7 @@ Its basic idea is to first figure out the links that are robustly absent or buil
 # Technical details
 
 - `main.m`: the main program of DAE, including the parameter settings, decomposition
-of networks, and the implementation of LogTP to the subnetworks.
+of networks, and the exhaustive search.
 
 - `dvalue.m`: to compute the difference of payoff in a given network.
  
