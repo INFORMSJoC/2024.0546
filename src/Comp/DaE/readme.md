@@ -49,7 +49,7 @@ the non-robust links and the robust ones.
   ˜D and the agents connected to them via a robustly built link.
   
   Input: N, number of players; a 1 × N vector S, the output of “conncomp(˜D )”; D, the N × N matrix
-  derived from “robust link.m”; num S, the number of connected conponents.
+  derived from “robust link.m”; num S, the number of connected components.
   
   Output: group, a matrix of N columns. Each row of the matrix corresponds to
   a subnetwork. Its (i, j)-th element equals 1 if agent j is contained in the i-th
@@ -57,7 +57,7 @@ the non-robust links and the robust ones.
   
 - `solution1.m`: to figure out the pairwise stable subnetworks with exhaustive searching. (in this process, we only focus on the non-robust links and label all the candidate networks with the function `decom`).
   
-  Input: N, number of players; group, a 1 × N vector that records a subnetwork; e, d, parameters of the problem; D, M, two matrice derived from `robust_links.m`.
+  Input: N, number of players; group, a 1 × N vector that records a subnetwork; e, d, parameters of the problem; D, M, two matrices derived from `robust_links.m`.
 
   Output: sol, a subset of [0,1]^L that reports all pairwise stable subnetworks;  k, number of pairwise stable subnetworks; ind, the number of nonrobust
  links in these subnetworks.
@@ -65,7 +65,7 @@ the non-robust links and the robust ones.
 - `check_PS.m`: to check whether the subnetwork is pairwise stable, applied in the exhaustive search.
   
   Input: a network net in [0,1]^L; e, d, N parameters of the problem;
-  lin, output of "link.m".
+  lin, the output of "link.m".
  
   Output: z in {0,1}, net is pairwise stable if z=1 and 0 otherwise.
 
