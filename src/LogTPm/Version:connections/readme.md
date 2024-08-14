@@ -26,7 +26,7 @@ In this folder, we show the version of LogTPm applied to a connections model of 
   
 - `loop_values.m`: to compute the payoff vectors in each possible network when assuming the agents are located on a circle.
   
-  Input: gra, a 2^L × L matrix recording all possible networks derived from `loop_graph.m`.
+  Input: gra, a 2^L × L matrix recording all possible networks derived from `loop_graph.m`; w, a 1 × N vector of social values in connections model.
   
   Output: a 2^L × N matrix Va whose each row corresponds to the payoff vector.
 
