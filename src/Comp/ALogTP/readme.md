@@ -36,7 +36,7 @@ the non-robust links and the robust ones.
   subproblem contains the agents in a connected component of the graph given by
   ˜D and the agents connected to them via a robustly built link.
   
-  Input: a 1 × N vector S, the output of “conncomp(˜D )”; D, the N × N matrix
+  Input: N, number of players; a 1 × N vector S, the output of “conncomp(˜D )”; D, the N × N matrix
   derived from “robust link.m”; num S, the number of connected conponents.
   
   Output: group, a matrix of N columns. Each row of the matrix corresponds to
