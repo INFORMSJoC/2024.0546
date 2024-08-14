@@ -30,13 +30,13 @@ of networks, and the exhaustive search.
   Kranton (2007) as an example. (in Section 5.4 of our paper) e, the effort
   vector; d > 0, cost for links.
   
-  Output: two N × N matrice M and D. A link ij is surely to be absent if
+  Output: two N × N matrices M and D. A link ij is surely to be absent if
   Mij = 0 or Mji = 0. This link is sure to be established if Dij = 0 and Dji = 0.
   
 - `combine.m`: to summarize the results of `robust_link.m` and distinguish between
 the non-robust links and the robust ones.
   
-  Input: N, number of players; the matrice M and D derived from `robust_link.m`.
+  Input: N, number of players; the matrices M and D derived from `robust_link.m`.
   
   Output:  an N × N symmetric matrix ˜D. For link ij, ˜Dij = 0 if it is robustly absent
   or built and ˜Dij = 1 otherwise. The matrix ˜D is the
