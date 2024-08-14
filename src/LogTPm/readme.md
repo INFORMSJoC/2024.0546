@@ -11,11 +11,11 @@ The difference between LogTPm and LogTPc is in the computation of the partial de
   
   Output: a 2^L × L matrix gra whose each row represents a possible network. 
   
-- `values.m`: to compute the payoff vectors in each possible network.
+- `values.m`: to compute the payoff vectors in each unweighted network.
   
   Input: gra, a 2^L × L matrix recording all possible networks derived from `graphs.m`.
   
-  Output: a 2^L × N matrix Va whose each row corresponds to the payoff vector.
+  Output: a 2^L × N matrix Va whose each row corresponds to a payoff vector.
   
 - `def.m`: to compute the partial derivatives of the utility functions with respect to a given network.
   
