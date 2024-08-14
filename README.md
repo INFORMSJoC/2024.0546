@@ -33,7 +33,7 @@ Below is the BibTex for citing this snapshot of the repository.
 
 ## Description
 
-A path-following algorithm works in MatLab software for computing pairwise stable networks. This repository includes the source code and computational results for all randomly generated numerical instances presented in the paper. See the file `src/Manual.pdf` or our paper for a detailed description of pairwise stability and the algorithm.
+A path-following algorithm works in MatLab software for computing pairwise stable networks. This repository includes the source code and computational results presented in the paper. See the file `src/Manual.pdf` or our paper for a detailed description of pairwise stability and the algorithm.
 
 ## Code files
 The folder `src` contains the codes of our algorithm LogTP, which has different versions that apply to different setups of problems.
@@ -46,7 +46,7 @@ The folder `src` contains the codes of our algorithm LogTP, which has different 
 
 ## Results files
 
-The `results` folder contains the numerical results of algorithms reported in the paper.
+The folder `results` contains the numerical results of algorithms reported in the paper.
 
 `co-author`: algorithm `LogTPm` for the co-author model of Jackson & Wolinsky (1996), reported in Section 5.1.
 
@@ -56,21 +56,21 @@ The `results` folder contains the numerical results of algorithms reported in th
 
 `public-good`: the comparison among algorithms `LogTPc`, `Comp/DaE` and `Comp/ALogTP` for the public good provision network problem introduced in Bramoulle and Kranton (2007), reported in Section 5.4.
 
-`Convergence to LinTP`: an example that shows the convergence of LogTP to LinTP as η approaches 0, reported in Section 4.2.
+`Convergence to LinTP`: an instance that illustrates the convergence of LogTP to LinTP as η approaches 0, shown in Section 4.2.
 
 ## Replicating
 
-To replicate the results in Figure 1, apply `plot1.m` in folder `results/convergence to LinTP`.
+To replicate the results in Figure 1, run `plot1.m` in folder `results/convergence to LinTP`.
 
-To replicate the results in Figures 2 and 3, apply `main.m` in folder `src/LogTPm`.
+To replicate the results in Figures 2 and 3, run `main.m` in folder `src/LogTPm`.
 
-To replicate the results in Table 1 and Figure 4, apply `main.m` and `check_PS.m` in folder `src/LogTPc`.
+To replicate the results in Table 1 and Figure 4, run `main.m` and `check_PS.m` in folder `src/LogTPc`.
 
-To replicate the results in Table 2 and Figure 5, apply the codes in folders `src/LogTPm/Version:connections` and `src/Comp/LinTP`.
+To replicate the results in Table 2 and Figure 5, run the codes in folders `src/LogTPm/Version:connections` and `src/Comp/LinTP`.
 
-To replicate the results in Table 3, apply the codes in folders `src/LogTPc/Version:public-good` and `src/Comp/DAE`.
+To replicate the results in Table 3, run the codes in folders `src/LogTPc/Version:public-good` and `src/Comp/DAE`.
 
-To replicate the results in Tables 4 and 5 and Figure 6, apply the codes in folder `src/LogTPc/Version:public-good` and `src/Comp/ALogTP`.
+To replicate the results in Tables 4 and 5 and Figure 6, run the codes in folder `src/LogTPc/Version:public-good` and `src/Comp/ALogTP`.
 
 # References
 1. Bich P, Morhaim L (2020). On the existence of pairwise stable weighted networks. Mathematics of Operations Research, 45:1393–1404.
