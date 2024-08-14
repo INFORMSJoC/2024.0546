@@ -34,7 +34,7 @@ We compare LinTP with our algorithm LogTP in Section 5.3 of our paper on a conne
   
 	Input: p in [0,1]^L, a prior.
 
-	Output: z in [0,1]^{4L}, the starting point of the path.
+	Output: z in [0,1]^{4L+1}, the starting point of the path.
   
 - `def.m`: To compute the partial derivatives of the utility functions for a given network.
   
