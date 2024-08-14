@@ -1,7 +1,7 @@
 # Manual for DAE
 DAE is the insightful approach of Leung (2020) that computes pairwise stable networks in problems with a sparse structure.
 i.e. the utility function of each agent only depends on his direct connections. 
-Its basic idea is to first figure out the links that are robustly absent or built. These links decompose the whole network into smaller ones, to which we then conduct an exhaustive searching.
+Its basic idea is to first figure out the links that are robustly absent or built. These links decompose the whole network into smaller ones, for which we then conduct an exhaustive search.
 
 # Technical details
 
@@ -11,7 +11,7 @@ of networks, and the implementation of LogTP to the subnetworks.
 - `dvalue.m`: to compute the difference of payoff in a given network.
  
    Input: N, e, d, parameters for the problem; net in [0,1]^L, a given
-  network; i, j, the corresponding agents; lin, output of `link.m`.
+  network; i, j, the corresponding agents; lin, the output of `link.m`.
   
   Output: y, the difference (between the cases xij = 1 ad xij=0) of agent i's payoff functions in a given network.
 
@@ -23,7 +23,7 @@ of networks, and the implementation of LogTP to the subnetworks.
  
   Output: the payoff of agent i in network net.
 
-- `robust_links.m`: to figure out the robustly absent and built links by computing the maxmimum and minimum of the difference of utility functions. (with `dvalue.m`)
+- `robust_links.m`: to figure out the robustly absent and built links by computing the maximum and minimum of the difference of utility functions. (with `dvalue.m`)
   
   Input: N, number of players and other parameters in the model. Take the public provision model of Bramoull´e and
   Kranton (2007) as an example. (in Section 5.4 of our paper) e, the effort
@@ -54,7 +54,7 @@ the non-robust links and the robust ones.
   a subnetwork. Its (i, j)-th element equals 1 if agent j is contained in the i-th
   subnetwork and 0 otherwise.
   
-- `solution1.m`: to figure out the pairwise stable subnetworks with an exhaustive searching. (in this process, we only focus on the non-robust links and label all the candidate networks with the function `decom`).
+- `solution1.m`: to figure out the pairwise stable subnetworks with exhaustive searching. (in this process, we only focus on the non-robust links and label all the candidate networks with the function `decom`).
   
   Input: group, a 1 × N vector that records a subnetwork.
 
