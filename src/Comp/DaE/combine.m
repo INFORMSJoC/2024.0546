@@ -1,6 +1,6 @@
 function tilde_D = combine(N,M,D)
 % combine: to figure out the nonrobust links.
-% Input: N, number of agents; two N*N matrice M and D derived from "robust link.m".
+% Input: N, number of agents; two N × N matrices M and D derived from "robust link.m".
 % Output: a N × N matrix ˜D. For each link ij, ˜Dij = 0 if the link is surely to be absent
 % or built and ˜Dij = 1 otherwise. With this matrix, we can decompose the network
 % into smaller ones. (via the Matlab function “conncomp(˜D )”).
