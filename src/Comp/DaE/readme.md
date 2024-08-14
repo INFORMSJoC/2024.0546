@@ -57,7 +57,7 @@ the non-robust links and the robust ones.
   
 - `solution1.m`: to figure out the pairwise stable subnetworks with exhaustive searching. (in this process, we only focus on the non-robust links and label all the candidate networks with the function `decom`).
   
-  Input: group, a 1 × N vector that records a subnetwork; N, e, d, parameters of the problem; D, M, two matrice derived from `robust_links.m`.
+  Input: N, number of players; group, a 1 × N vector that records a subnetwork; N, e, d, parameters of the problem; D, M, two matrice derived from `robust_links.m`.
 
   Output: sol, a subset of [0,1]^L that reports all pairwise stable subnetworks;  k, number of pairwise stable subnetworks; ind, the number of nonrobust
  links in these subnetworks.
