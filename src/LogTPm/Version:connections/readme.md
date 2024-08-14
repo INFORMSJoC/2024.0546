@@ -1,5 +1,5 @@
 # LogTPm for a connections model
-In this folder, we show the version of LogTPm applied to a connections model of Jackson & Wolinsky (1996), discussed in Section 5.3. In this version, we assume the agents are located on a circle and adjust the codes in `links.m`, `graphs.m` and `values.m` accordingly. We rename them by `loop_link.m`, `loop_graph.m` and `loop_values.m`. We avoid the redundant copies of codes. To derive the whole software, one has to substitute the files `main.m`, `links.m`, `graphs.m`, and `values.m` in `src/LogTPm` with the corresponding ones here. Also one has to add the code file `floyd.m`.
+In this folder, we show the version of LogTPm applied to a connections model of Jackson & Wolinsky (1996), discussed in Section 5.3. In this version, we assume the agents are located on a circle and adjust the codes in `links.m`, `graphs.m` and `values.m` accordingly. We rename them by `loop_link.m`, `loop_graph.m` and `loop_values.m`. We avoid redundant copies of codes. To derive the whole software, one has to substitute the files `main.m`, `links.m`, `graphs.m`, and `values.m` in `src/LogTPm` with the corresponding ones here. Also one has to add the code file `floyd.m`.
 
 # Technical details
 - `main.m`: the main program of LogTPm, including the parameter setting in the connections model.
