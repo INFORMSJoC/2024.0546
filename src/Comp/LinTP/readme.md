@@ -1,12 +1,10 @@
 # Manual for LinTP
 LinTP is the algorithm of Herings & Zhan (2024) that computes pairwise stable networks in problems of mixed extension where agents all have multi-linear utility functions. 
-Herings & Zhan (2024) establish the equivalence between pairwise stable networks and Nash equilibria of certain noncooperative games. They then apply the linear tracing procedure
-of Harsanyi & Selten (1988) to select and compute the pairwise stable networks.
 
 In this folder, we show our implementation of LinTP and distribute it along with our algorithm LogTP.
-LinTP is similar to LogTPc since it also applies a predictor-corrector method to numerically trace a homotopy path. However, their paths are determined by a different homotopy system. 
+Both LinTP and LogTP use the predictor-corrector method to numerically trace the homotopy paths. However, their paths are determined by different homotopy systems. 
 
-We compare LinTP with our algorithm LogTP in Section 5.3 of our paper on a connections model of Jackson & Wolinsky (1996).
+We compare LinTP with LogTP, more precisely LogTPm, in Section 5.3 of the paper on a connections model of Jackson & Wolinsky (1996).
 
 # Technical details
 - `main.m`: the main program of LinTP, including the parameter settings and the
@@ -26,7 +24,7 @@ We compare LinTP with our algorithm LogTP in Section 5.3 of our paper on a conne
   
 - `loop_values.m`: to compute the payoff vectors in each possible network when assuming the agents are located on a circle.
   
-  Input: gra, a 2^L × L matrix recording all possible networks; w, a 1 × N vector of social values in connections model.
+  Input: gra, a 2^L × L matrix recording all possible networks; w, a 1 × N vector of social values in the connections model.
   
   Output: a 2^L × N matrix Va whose each row corresponds to the payoff vector.
 
@@ -57,5 +55,4 @@ We compare LinTP with our algorithm LogTP in Section 5.3 of our paper on a conne
 
 # References
 1. Herings PJJ, Zhan Y (2024) The computation of pairwise stable networks. Mathematical Programming 203:443–473.
-2. Harsanyi JC, Selten R (1988) A general theory of equilibrium selection in games (Cambridge: MIT Press).
-3. Jackson MO, Wolinsky A (1996) A strategic model of social and economic networks. Journal of Economic Theory 71:44–74.
+2. Jackson MO, Wolinsky A (1996) A strategic model of social and economic networks. Journal of Economic Theory 71:44–74.
