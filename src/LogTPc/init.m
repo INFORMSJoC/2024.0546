@@ -1,6 +1,9 @@
 function y = init()
-%search for the starting point of the homotopy path
-global L Sigma M eta pri lin N alpha
+% init: to search for the starting point of the homotopy path by solving the equations given by "u0.m" with the Matlab function "fsolve".
+% Input: none.
+% Output: a 2L*1 vector y such that [y;0] is the starting point of the
+% homotopy path.
+global L Sigma M 
 opt1 = optimset('Display','off');
 
 y = zeros(M,1);

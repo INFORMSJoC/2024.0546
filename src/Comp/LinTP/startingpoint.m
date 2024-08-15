@@ -1,14 +1,16 @@
 function z = startingpoint(p)
-%STARTINGPOINT 
+% startingpoint: to determine the starting point of the homotopy path.
+% Input: p in [0,1]^L, a prior.
+% Output: z in [0,1]^{4L+1}, the starting point of the path.
 
-    global L M 
+    global L M lin
     z = zeros(M+1,1);
     F0 = def(p);
     
     F = zeros(L,2);
     for i = 1:L
-        F(i,1) = F0(2*i-1);
-        F(i,2) = F0(2*i);
+        F(i,1) = F0(lin(i,1),lin(i,2));
+        F(i,2) = F0(lin(i,2),lin(i,1));
     end
 
     gammai = zeros(L,1);

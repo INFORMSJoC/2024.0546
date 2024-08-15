@@ -1,15 +1,15 @@
-function z = def(x,Link,target,num,e,d,N,lin,Sigma)
-%partial derivatives of utilities with respect to x
-global eta p
-z = zeros(num, N); %partial deriative marix
-t = x(2*num+1);
+function z = def(s,Link,x)
+% def: to compute the partial derivatives of the utility functions with respect to
+% a given network.
+% Input: s in [0,1]^{2num}, the vector of favorite strengths; Link in [0,1]^L, a vector that records the structure of the subnetwork;
+% x in [0,1]^L, a given network.
+% Output: a num*N whose (i,j) -th element represents the partial derivatives
+% of agent j's utility function with respect to the i-th link in the subnetwork.
+global e d lin N num target
+z = zeros(num, N); 
 
 % the strength of the nonrobust links
-net = zeros(1,num);
-for i = 1:num
-    net(i) = F(t,x(2*i-1),x(2*i),p(2*i-1),p(2*i),eta,i,num,Sigma);
-end
-net = insert(net,Link); %put the nonrobust links togerther with the robust ones
+net = insert(x,Link);
 str = zeros(N,N);
 for i = 1:N*(N-1)/2
     str(lin(i,1),lin(i,2)) = net(i);
@@ -25,7 +25,7 @@ for i=1:num
             if k ~= lin(target(i),3-j)
                 temp = temp + str(player,k)*e(k);
             else
-                temp = temp + x(2*i-2+j)*e(k);
+                temp = temp + s(2*i-2+j)*e(k);
             end
         end
         z(i,player) = db(temp)*e(lin(target(i),3-j)) - d;

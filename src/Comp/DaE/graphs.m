@@ -1,5 +1,7 @@
 function gra = graphs(n)
-% all possible networks
+% graphs: to show the set of all possible networks.
+% Input: n, the number of links.
+% Output: a 2^n*n matrix whose each row represents a possible network.
     numL = n;% number of links
     numG = 2.^numL;
     gra = zeros(numG,numL);

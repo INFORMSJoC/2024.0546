@@ -1,5 +1,9 @@
 function z = loop_values(gra, w)
-%payoffs of each unweighted network
+% loop_values: to compute the payoff vectors in each possible network when assuming the agents
+% are located on a circle.
+% Input: gra, a 2^L*L matrix recording all possible networks; w, a 1*N vector of social values in connections model.
+% Output: a 2^L*N matrix whose each row corresponds to the payoff vector
+% of a unweighted network.
     global G N d c 
     z = zeros(G,N);
     

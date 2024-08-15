@@ -1,8 +1,14 @@
 function z = def(net)
-%partial derivatives of utilities
+% def: to compute the partial derivatives of the utility functions with
+% respect to a given network.
+% Input: net, a network in [0,1]^{L}.
+% Output: a N*N matrix whose (i,j) and (j,i) -th element represents the
+% partial derivatives of i's and j's utility functions with respect to link
+% ij, respectively.
+  
 global L Va gra N lin
 numG = 2.^L;
-z = zeros(N, N); %返回值，偏导数矩阵
+z = zeros(N, N);
 
 
 for i = 1:L

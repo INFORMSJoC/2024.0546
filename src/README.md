@@ -5,6 +5,10 @@ This `src` folder contains codes of five algorithms for computing pairwise stabl
 4. `Comp/DaE`: the algorithm of Leung (2020), used in Section 5.4 for comparison.
 5. `Comp/ALogTP`: the accelerated version of our algorithm that exploits the algorithm of Leung (2020), used in Section 5.4 of the paper.
 
+Note. LogTP (LogTPc and LogTPm) and ALogTP are the algorithms we developed in the paper. We also implemented DaE and LinTP and distributed them with LogTP.
+
+For a more detailed introduction to our algorithm, see the file `src/Manual.pdf` or use the help function in Matlab.
+
 # References
 1. Herings PJJ, Zhan Y (2024). The computation of pairwise stable networks. Mathematical Programming, 203:443–473.
 2. Leung MP (2020). Equilibrium computation in discrete network games. Quantitative Economics, 11:1325–1347.

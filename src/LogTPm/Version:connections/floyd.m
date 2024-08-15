@@ -1,14 +1,16 @@
-function z = floyd(graph,N)
-%Floyd algorithm
-
+function z = floyd(net,N)
+% Floyd algorithm: applied to compute the payoff vectors in the unweighted networks. 
+% Input: net, a network in [0,1]^L, N, number of players.
+% Output: a N*N matrix whose (i,j)-th element represents the shortest
+% distance between agent i and j in the network net.
         z = 999*ones(N,N);
         for j = 1:N-1
-            if graph(j) == 1
+            if net(j) == 1
                 z(j,j+1) = 1;
                 z(j+1,j) = 1;
             end
         end
-        if graph(N) == 1
+        if net(N) == 1
             z(1,N) = 1;
             z(N,1) = 1;
         end

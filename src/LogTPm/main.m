@@ -1,5 +1,5 @@
-%pairwise stable network, main program
-%coauthor model
+% pairwise stable network, main program
+% coauthor model
 clc
 clear
 global L N M d0 b0 opt1 G c Va lin gra Sigma pri eta p
@@ -25,7 +25,7 @@ Sigma = unifrnd(0,1,3*L,1);
 p = unifrnd(0,1,3*L,1);
 pri = zeros(1,L);
 for i=1:L
-    pri(i) = min(p(2*i-1),p(2*i));
+    pri(i) = p(2*L+i)*p(2*i-1) + (1-p(2*L+i))*p(2*i);
 end
 
 
@@ -82,7 +82,6 @@ while 1-e1 > tol0
 
     d0 = g;
     b0 = d0'*x1;
-    opt1 = optimset('Display','off','TolFun',acr(e1));
     [x,~,exitflag] = fsolve(@(x) ahomof(x), x1,opt1);
     count = count + 1;
 
@@ -105,4 +104,3 @@ for i = 1:L
     ps(i)=min(x(2*i-1),x(2*i));
 end
 ps
-def(ps)

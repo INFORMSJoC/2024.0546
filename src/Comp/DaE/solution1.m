@@ -1,5 +1,11 @@
-function [sol, k, ind, rea, time] = solution1(N,group,e,d,D,M)
-%SOLUTION1 exhaustive searching as in Leung(2020)
+function [sol, k, ind] = solution1(N,group,e,d,D,M)
+% solution.m: to figure out the non-robust links in a subnetwork and then apply
+% an exhaustive search to find the pairwise stable subnetworks.
+% Input: N, number of players; group, a 1 × N vector that records a
+% subnetwork; e, d, parameters of the model; D, M two matrice derive from
+% "robust_links.m".
+% Output: sol, a subset of [0,1]^L that reports all pairwise stable subnetworks; k, number of pairwise stable subnetworks; ind, the number of nonrobust
+% links in this subnetwork.
     num = norm(group,1); % number of players in the subproblem
 
     % the list of all involved players
@@ -35,8 +41,6 @@ function [sol, k, ind, rea, time] = solution1(N,group,e,d,D,M)
     k = 1;
     if L == 0
         ind=0;
-        rea=0;
-        time =0;
         return
     end
     ind = L-n; %number of nonrobust links

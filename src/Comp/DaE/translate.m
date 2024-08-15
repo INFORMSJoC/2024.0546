@@ -1,5 +1,10 @@
 function y = translate(N,num,net,player)
-%TRANSLATE vector2matrix
+% translate: extend a subnetwork to a whole one (the links not in the
+% subnetwork have strength 0)
+% Input: N, number of players; num, number of players in the subnetwork;
+% net: a given subnetwork; player: a vector that maps the index of agents
+% in the subnetwork to that defined in the whole network.
+% Output: an extended network.
     y = zeros(1,N*(N-1)/2);
     str = zeros(N,N);
     lin = link(N);

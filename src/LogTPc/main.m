@@ -1,5 +1,5 @@
-%main procedure for LogTP 
-%patent race model
+% main procedure for LogTP 
+% patent race model
 clc
 clear
 global L N M d0 b0 opt1 Sigma lin rou alpha pri eta p
@@ -17,17 +17,22 @@ L = N*(N-1)/2; % number of links
 M = 2*L; % dimension of variables
 lin = link(N);
 
-%parameters
+% parameters of the patent race model
 rou = 0; %common discount factor
-alpha = [2,2,4.0];
+alpha = [2,2,4.0]; %R&D vector
 
 
 % Homotopy computation
-p = unifrnd(0,1,2*L,1);
+p = unifrnd(0,1,3*L,1);
 pri = zeros(1,L);
 for i=1:L
-    pri(i) = min(p(2*i-1),p(2*i));
+    pri(i) = p(2*L+i)*p(2*i-1) + (1-p(2*L+i))*p(2*i);
 end
+% p = unifrnd(0,1,2*L,1);
+% pri = zeros(1,L);
+% for i=1:L
+%     pri(i) = min(p(2*i-1), p(2*i));
+% end
 Sigma = unifrnd(0,1,3*L,1); 
 
 %Initialization
@@ -85,7 +90,6 @@ while 1-e1 > tol0
 
     d0 = g;
     b0 = d0'*x1;
-    opt1 = optimset('Display','off','TolFun',acr(e1));
     [x,~,exitflag] = fsolve(@(x) ahomof(x), x1,opt1);
 
     dis = x0 - x;
@@ -106,4 +110,3 @@ for i = 1:L
     ps(i) = min(x(2*i-1),x(2*i));
 end
 ps % PS network
-def(x)  %partial deriative matrix

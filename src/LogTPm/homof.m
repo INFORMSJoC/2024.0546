@@ -1,12 +1,12 @@
-%Homotopy Mapping
 function f = homof(x)
+% homof: to compute the homotopy system.
+% Input: x, a point in [0,1]^{2L+1}.
+% Output: f, the value of the homotopy system (in [0,1]^{2L}).
 global L M Sigma lin pri eta p
 
 t = x(M+1);
-net = zeros(1,L);
-for i = 1:L
-    net(i) = F(t,x(2*i-1),x(2*i),p(2*i-1),p(2*i),eta,i);
-end
+net = F(t,x(1:M,:),p);
+
 
 f = zeros(M,1);
 df = def(net);
