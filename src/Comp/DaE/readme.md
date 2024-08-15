@@ -71,7 +71,7 @@ the non-robust links and the robust ones.
 
 In `main.m`, the pairwise stable networks are recorded in `net`. Its each row records the index and the structure of a pairwise stable subnetwork. For example, when N=3, the row (1,1,0,0) means that (1,0,0) is a pairwise subnetwork that has the first structure. (the structures are given by `search_subproblem.m`) To derive the whole network, one has to put all subnetworks with different indices together.
 # Applications
-We compare DaE with our algorithm LogTP in Section 5.4 of our paper on a public good provision model of Bramoulle & Kranton (2007).
+We compare DaE with our algorithm LogTP in Section 5.4 of the paper on a public good provision model of Bramoulle & Kranton (2007).
 
 # References
 1. Leung, M. P. (2020). Equilibrium computation in discrete network games. Quantitative Economics, 11:1325–1347.
