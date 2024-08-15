@@ -1,12 +1,12 @@
-# Manual for DAE
-DAE is the insightful approach of Leung (2020) that computes pairwise stable networks in problems with a sparse structure.
-i.e. the utility function of each agent only depends on his direct connections. 
-Its basic idea is to first figure out the links that are robustly absent or built. These links decompose the whole network into smaller ones, for which we then conduct an exhaustive search.
+# Manual for DaE
+DaE is the algorithm introduced by Leung (2020) to compute pairwise stable networks in problems with a sparse structure.
+i.e. the utility function of each agent only depends on the direct connections. 
+Its basic idea is to find the links that are robustly absent or built. These links decompose the whole network into smaller ones, for which we then use an exhaustive search.
 
-In this folder, we show our implementation of DAE and distribute it along with our algorithm LogTP.
+In this folder, we show our implementation of DaE and distribute it along with our algorithm LogTP.
 # Technical details
 
-- `main.m`: the main program of DAE, including the parameter settings, decomposition
+- `main.m`: the main program of DaE, including the parameter settings, decomposition
 of networks, and the exhaustive search.
 
 - `dvalue.m`: to compute the difference of payoff in a given network.
@@ -71,7 +71,7 @@ the non-robust links and the robust ones.
 
 In `main.m`, the pairwise stable networks are recorded in `net`. Its each row records the index and the structure of a pairwise stable subnetwork. For example, when N=3, the row (1,1,0,0) means that (1,0,0) is a pairwise subnetwork that has the first structure. (the structures are given by `search_subproblem.m`) To derive the whole network, one has to put all subnetworks with different indices together.
 # Applications
-We compare DAE with our algorithm LogTP in Section 5.4 of our paper on a public good provision model of Bramoulle & Kranton (2007).
+We compare DaE with our algorithm LogTP in Section 5.4 of our paper on a public good provision model of Bramoulle & Kranton (2007).
 
 # References
 1. Leung, M. P. (2020). Equilibrium computation in discrete network games. Quantitative Economics, 11:1325–1347.
